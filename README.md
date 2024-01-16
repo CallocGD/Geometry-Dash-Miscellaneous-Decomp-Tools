@@ -9,4 +9,4 @@ this will be very different [from this project](https://github.com/HJfod/cocos-h
 for libcoscos. Note that I am not using IDA Pro Since I am poor, hence why I will be making so many things easier to decompile in ghidra to provide a fair advantage.
 - Making tools to port android's symbols to windows in the future if we can figure out how to port thunk functions
 - I will be more focused around The HTTP Protocols and manager parts of Geometry dash's code As well as Understanding the `GameManager` and `GameLevelManager` to the highest degree possible but you are welcome to propose your own tools by making a pull-request or modifying any of the tools I make avalibe or dump into this repository. 
-- Documentation of Geometry dash's functions belonging to the `GameLevelManager` and `GameManager` Class Objects Including Miscellaneous Objects That Decide to point out.
+- Documentation of Geometry dash's functions belonging to the `GameLevelManager` and `GameManager` class objects including Miscellaneous objects that decide to point out.

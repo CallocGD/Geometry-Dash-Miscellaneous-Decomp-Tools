@@ -1,0 +1,85 @@
+
+So I Orginally Discovered these filenames on Some of Robtop's Old Twitch Vods And I decided it would be maybe somewhat useful to show how robtop organizes these files 
+Note that they all belong to same folder (as far as I am aware).
+sources used: https://youtube.com/watch?v=eBcUC9lYLdI (There Might be more videos that I haven't taken the time to view yet that could reveal more of these)
+ 
+(Unsure) = Can't read it.
+(?) = Unsure if it exists but it Probably does...
+
+CustomListview.h
+CustomSongLayer.cpp
+CustomSongLayer.h
+DailyLevelPage.h
+DailyLevelPage.cpp
+DialogLayer.cpp
+DialogLayer.h
+EditButtonBar.cpp
+EditButtonBar.h
+EditorPauseLayer.cpp
+EditorPauseLayer.h
+EditorUI.cpp
+EditorUI.h
+EditorUISmartBlocks.cpp
+EndLevelLayer.cpp
+EndLevelLayer.h
+EndPortalObject.cpp
+EndPortalObject.h
+EveryplayToolbox.h
+FileSaveManager.cpp
+FileSaveManager.h
+FLAlertLayer.h
+FLAlertLayer.cpp
+FNCOAwdLoEngine.cpp (Unsure Probbably spelled it wrong)
+FNCOAwdLoEngine.h (Unsure Probbably spelled it wrong)
+FollowRewardPage.cpp
+FollowRewardPage.h
+FRequestProfilePage.cpp
+FRequestProfilePage.h
+FriendsProfilePage.cpp
+FriendsProfilePage.h
+GameAchievements.cpp
+GameAchievements.h
+GameEffectsManager.cpp
+GameEffectsManager.h
+GameLevelManager.cpp
+GameLevelManager.h
+GameManager.cpp
+GameManager.h (?)
+
+
+MusicDownloadManager.cpp (?)
+MusicDownloadManager.h
+MyLevelsScene.cpp
+MyLevelsScene.h
+OBB2D.cpp
+OBB2D.h
+ObjectManager.cpp
+ObjectManager.h
+ObjectSaveKeys.h
+ObjectToolbox.cpp
+OptionsLayer.cpp
+OptionsLayer.h
+PauseLayer.cpp
+PauseLayer.h
+PlatformToolbox.cpp
+PlatformToolbox.h
+PlayScene.cpp
+PlayScene.h
+PriceLabel.cpp
+PriceLabel.h
+ProfilePage.cpp
+ProfilePage.h
+PromoInterstitial.cpp
+PromoInterstitial.h
+Quaternion.h
+RateDemonLayer.cpp
+RateDemonLayer.h
+RateStarsLayer.cpp
+RateStarsLayer.h
+RewardsPage.cpp
+RewardsPage.h
+rtsha1.cpp
+rtsha1.h
+
+
+

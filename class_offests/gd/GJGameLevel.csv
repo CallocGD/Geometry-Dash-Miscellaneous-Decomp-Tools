@@ -1,4 +1,4 @@
-Offset","Length","Mnemonic","DataType","Name","Comment"
+"Offset","Length","Mnemonic","DataType","Name","Comment"
 "0x108","0x4","CCDictionary *","CCDictionary *","m_lastBuildSave",""
 "0x10c","0x4","int","int","m_levelID_Random","Created by retype action"
 "0x110","0x4","int","int","m_levelID_Seed","Created by retype action"

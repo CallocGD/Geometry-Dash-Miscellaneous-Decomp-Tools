@@ -1,0 +1,3 @@
+# all scripts only require these 2 libraries, Very minimal
+click
+pyperclip

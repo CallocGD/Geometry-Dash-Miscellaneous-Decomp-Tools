@@ -1,0 +1,15 @@
+GJGameLevel::setAccountID, m_accountID
+GJGameLevel::setAttempts, m_attempts
+GJGameLevel::setAttemptTime, m_attemptTime
+GJGameLevel::setClicks, m_clicks
+GJGameLevel::setCoinsVerified, m_coinsVerified
+GJGameLevel::setDailyID, m_dailyID
+GJGameLevel::setDemon, m_demon
+GJGameLevel::setJumps, m_jumps
+GJGameLevel::setLevelID, m_levelID
+GJGameLevel::setNewNormalPercent, m_newNormalPercent
+GJGameLevel::setNewNormalPercent2, m_newNormalPercent2
+GJGameLevel::setNormalPercent, m_normalPercent
+GJGameLevel::setObjectCount, m_objectCount
+GJGameLevel::setOriginalLevel, m_originalLevel
+GJGameLevel::setStars, m_stars

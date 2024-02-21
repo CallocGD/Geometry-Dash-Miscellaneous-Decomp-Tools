@@ -1,0 +1,4 @@
+"Offset","Length","Mnemonic","DataType","Name","Comment"
+"0x0","0x4","uint","uint","num",""
+"0x4","0x4","uint","uint","max",""
+"0x8","0x4","CCObject * *","CCObject * *","arr",""

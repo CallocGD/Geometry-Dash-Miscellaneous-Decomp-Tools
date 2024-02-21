@@ -1,6 +1,5 @@
 # Scripts
-These numerous scripts are meant to help me with Fixing Geode bindings, repairing class members and generating code that is repetative or boring to write by hand
-and have the potential to cut down the time it takes to reverse engineer Robtop's C++ code for Geometry Dash significantly.
+These numerous scripts are meant to help me with Fixing Geode bindings, repairing class members and generating code that is repetative or boring to write by hand. They all have the potential to cut down the time it takes to reverse engineer Robtop's C++ code for Geometry Dash significantly.
 
 
 ## How to Install

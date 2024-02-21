@@ -1,6 +1,6 @@
 # Geometry-Dash-Miscellaneous-Decomp-Tools
 A Slew of Miscellaneous Tools I will and others use to Decompile Geometry Dash however it is primarily focused around versions 2.2 and higher.
-
+if you want to see the code I've reversed see: (my repo for it)[https://github.com/CallocGD/GD-2.2-Decompiled]
 
 ## Goals with this repository
 - To Educate myself and others on how Geometry dash 2.2 works including missing parts of the code that have not been seen yet in [wyliemaster's decomp of 2.11](https://github.com/Wyliemaster/GD-Decompiled)

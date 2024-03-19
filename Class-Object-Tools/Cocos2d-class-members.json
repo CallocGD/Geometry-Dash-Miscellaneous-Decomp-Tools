@@ -1,0 +1,6628 @@
+{
+    "CCDataVisitor": {
+        "name": "CCDataVisitor",
+        "subclasses": [],
+        "members": []
+    },
+    "CCPrettyPrinter": {
+        "name": "CCPrettyPrinter",
+        "subclasses": [
+            "CCDataVisitor"
+        ],
+        "members": [
+            {
+                "name": "_indentLevel",
+                "type": "int"
+            },
+            {
+                "name": "_indentStr",
+                "type": "std::string"
+            },
+            {
+                "name": "_result",
+                "type": "std::string"
+            }
+        ]
+    },
+    "CCCopying": {
+        "name": "CCCopying",
+        "subclasses": [],
+        "members": []
+    },
+    "CCObject": {
+        "name": "CCObject",
+        "subclasses": [
+            "CCCopying"
+        ],
+        "members": [
+            {
+                "name": "m_uID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nLuaID",
+                "type": "int"
+            },
+            {
+                "name": "m_nTag",
+                "type": "int"
+            },
+            {
+                "name": "m_uReference",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uAutoReleaseCount",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_eObjType",
+                "type": "int"
+            },
+            {
+                "name": "m_uObjectIdxInArray",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "CCPoint": {
+        "name": "CCPoint",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "float"
+            },
+            {
+                "name": "y",
+                "type": "float"
+            }
+        ]
+    },
+    "CCSize": {
+        "name": "CCSize",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "width",
+                "type": "float"
+            },
+            {
+                "name": "height",
+                "type": "float"
+            }
+        ]
+    },
+    "CCRect": {
+        "name": "CCRect",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "origin",
+                "type": "CCPoint"
+            },
+            {
+                "name": "size",
+                "type": "CCSize"
+            }
+        ]
+    },
+    "CCAction": {
+        "name": "CCAction",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pOriginalTarget",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_pTarget",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_nTag",
+                "type": "int"
+            },
+            {
+                "name": "m_fSpeedMod",
+                "type": "float"
+            }
+        ]
+    },
+    "CCFiniteTimeAction": {
+        "name": "CCFiniteTimeAction",
+        "subclasses": [
+            "CCAction"
+        ],
+        "members": [
+            {
+                "name": "m_fDuration",
+                "type": "float"
+            }
+        ]
+    },
+    "CCSpeed": {
+        "name": "CCSpeed",
+        "subclasses": [
+            "CCAction"
+        ],
+        "members": [
+            {
+                "name": "m_fSpeed",
+                "type": "float"
+            },
+            {
+                "name": "m_pInnerAction",
+                "type": "CCActionInterval*"
+            }
+        ]
+    },
+    "CCFollow": {
+        "name": "CCFollow",
+        "subclasses": [
+            "CCAction"
+        ],
+        "members": [
+            {
+                "name": "m_pobFollowedNode",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_bBoundarySet",
+                "type": "bool"
+            },
+            {
+                "name": "m_bBoundaryFullyCovered",
+                "type": "bool"
+            },
+            {
+                "name": "m_obHalfScreenSize",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_obFullScreenSize",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_fLeftBoundary",
+                "type": "float"
+            },
+            {
+                "name": "m_fRightBoundary",
+                "type": "float"
+            },
+            {
+                "name": "m_fTopBoundary",
+                "type": "float"
+            },
+            {
+                "name": "m_fBottomBoundary",
+                "type": "float"
+            }
+        ]
+    },
+    "CCAffineTransform": {
+        "name": "CCAffineTransform",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "a",
+                "type": "float"
+            },
+            {
+                "name": "b",
+                "type": "float"
+            },
+            {
+                "name": "c",
+                "type": "float"
+            },
+            {
+                "name": "d",
+                "type": "float"
+            },
+            {
+                "name": "tx",
+                "type": "float"
+            },
+            {
+                "name": "ty",
+                "type": "float"
+            }
+        ]
+    },
+    "_ccArray": {
+        "name": "_ccArray",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "num",
+                "type": "unsigned int"
+            },
+            {
+                "name": "max",
+                "type": "unsigned int"
+            },
+            {
+                "name": "arr",
+                "type": "CCObject**"
+            }
+        ]
+    },
+    "_ccCArray": {
+        "name": "_ccCArray",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "num",
+                "type": "unsigned int"
+            },
+            {
+                "name": "max",
+                "type": "unsigned int"
+            },
+            {
+                "name": "arr",
+                "type": "void**"
+            }
+        ]
+    },
+    "CCArray": {
+        "name": "CCArray",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "data",
+                "type": "ccArray*"
+            }
+        ]
+    },
+    "CCGLProgram": {
+        "name": "CCGLProgram",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_uProgram",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_uVertShader",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_uFragShader",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_uUniforms",
+                "type": "GLint[kCCUniform_MAX]"
+            },
+            {
+                "name": "m_pHashForUniforms",
+                "type": "struct _hashUniformEntry*"
+            },
+            {
+                "name": "m_bUsesTime",
+                "type": "bool"
+            },
+            {
+                "name": "m_hasShaderCompiler",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCTouch": {
+        "name": "CCTouch",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_nId",
+                "type": "int"
+            },
+            {
+                "name": "m_startPointCaptured",
+                "type": "bool"
+            },
+            {
+                "name": "m_startPoint",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_point",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_prevPoint",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCEvent": {
+        "name": "CCEvent",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": []
+    },
+    "CCSet": {
+        "name": "CCSet",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pSet",
+                "type": "std::set<CCObject*>*"
+            }
+        ]
+    },
+    "CCScriptHandlerEntry": {
+        "name": "CCScriptHandlerEntry",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_nHandler",
+                "type": "int"
+            },
+            {
+                "name": "m_nEntryId",
+                "type": "int"
+            }
+        ]
+    },
+    "CCSchedulerScriptHandlerEntry": {
+        "name": "CCSchedulerScriptHandlerEntry",
+        "subclasses": [
+            "CCScriptHandlerEntry"
+        ],
+        "members": [
+            {
+                "name": "m_pTimer",
+                "type": "CCTimer*"
+            },
+            {
+                "name": "m_bPaused",
+                "type": "bool"
+            },
+            {
+                "name": "m_bMarkedForDeletion",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCTouchScriptHandlerEntry": {
+        "name": "CCTouchScriptHandlerEntry",
+        "subclasses": [
+            "CCScriptHandlerEntry"
+        ],
+        "members": [
+            {
+                "name": "m_bIsMultiTouches",
+                "type": "bool"
+            },
+            {
+                "name": "m_nPriority",
+                "type": "int"
+            },
+            {
+                "name": "m_bSwallowsTouches",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCScriptEngineProtocol": {
+        "name": "CCScriptEngineProtocol",
+        "subclasses": [],
+        "members": []
+    },
+    "CCScriptEngineManager": {
+        "name": "CCScriptEngineManager",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pScriptEngine",
+                "type": "CCScriptEngineProtocol*"
+            }
+        ]
+    },
+    "_ccColor3B": {
+        "name": "_ccColor3B",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "r",
+                "type": "GLubyte"
+            },
+            {
+                "name": "g",
+                "type": "GLubyte"
+            },
+            {
+                "name": "b",
+                "type": "GLubyte"
+            }
+        ]
+    },
+    "_ccHSVValue": {
+        "name": "_ccHSVValue",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "h",
+                "type": "float"
+            },
+            {
+                "name": "s",
+                "type": "float"
+            },
+            {
+                "name": "v",
+                "type": "float"
+            },
+            {
+                "name": "absoluteSaturation",
+                "type": "GLubyte"
+            },
+            {
+                "name": "absoluteBrightness",
+                "type": "GLubyte"
+            },
+            {
+                "name": "__pad",
+                "type": "unsigned char[2]"
+            }
+        ]
+    },
+    "_ccColor4B": {
+        "name": "_ccColor4B",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "r",
+                "type": "GLubyte"
+            },
+            {
+                "name": "g",
+                "type": "GLubyte"
+            },
+            {
+                "name": "b",
+                "type": "GLubyte"
+            },
+            {
+                "name": "a",
+                "type": "GLubyte"
+            }
+        ]
+    },
+    "_ccColor4F": {
+        "name": "_ccColor4F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "r",
+                "type": "GLfloat"
+            },
+            {
+                "name": "g",
+                "type": "GLfloat"
+            },
+            {
+                "name": "b",
+                "type": "GLfloat"
+            },
+            {
+                "name": "a",
+                "type": "GLfloat"
+            }
+        ]
+    },
+    "_ccVertex2F": {
+        "name": "_ccVertex2F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "GLfloat"
+            },
+            {
+                "name": "y",
+                "type": "GLfloat"
+            }
+        ]
+    },
+    "_ccVertex3F": {
+        "name": "_ccVertex3F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "GLfloat"
+            },
+            {
+                "name": "y",
+                "type": "GLfloat"
+            },
+            {
+                "name": "z",
+                "type": "GLfloat"
+            }
+        ]
+    },
+    "_ccTex2F": {
+        "name": "_ccTex2F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "u",
+                "type": "GLfloat"
+            },
+            {
+                "name": "v",
+                "type": "GLfloat"
+            }
+        ]
+    },
+    "_ccPointSprite": {
+        "name": "_ccPointSprite",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "pos",
+                "type": "ccVertex2F"
+            },
+            {
+                "name": "color",
+                "type": "ccColor4B"
+            },
+            {
+                "name": "size",
+                "type": "GLfloat"
+            }
+        ]
+    },
+    "_ccQuad2": {
+        "name": "_ccQuad2",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "tl",
+                "type": "ccVertex2F"
+            },
+            {
+                "name": "tr",
+                "type": "ccVertex2F"
+            },
+            {
+                "name": "bl",
+                "type": "ccVertex2F"
+            },
+            {
+                "name": "br",
+                "type": "ccVertex2F"
+            }
+        ]
+    },
+    "_ccQuad3": {
+        "name": "_ccQuad3",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "bl",
+                "type": "ccVertex3F"
+            },
+            {
+                "name": "br",
+                "type": "ccVertex3F"
+            },
+            {
+                "name": "tl",
+                "type": "ccVertex3F"
+            },
+            {
+                "name": "tr",
+                "type": "ccVertex3F"
+            }
+        ]
+    },
+    "_ccV2F_C4B_T2F": {
+        "name": "_ccV2F_C4B_T2F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "vertices",
+                "type": "ccVertex2F"
+            },
+            {
+                "name": "colors",
+                "type": "ccColor4B"
+            },
+            {
+                "name": "texCoords",
+                "type": "ccTex2F"
+            }
+        ]
+    },
+    "_ccV2F_C4F_T2F": {
+        "name": "_ccV2F_C4F_T2F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "vertices",
+                "type": "ccVertex2F"
+            },
+            {
+                "name": "colors",
+                "type": "ccColor4F"
+            },
+            {
+                "name": "texCoords",
+                "type": "ccTex2F"
+            }
+        ]
+    },
+    "_ccV3F_C4B_T2F": {
+        "name": "_ccV3F_C4B_T2F",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "vertices",
+                "type": "ccVertex3F"
+            },
+            {
+                "name": "colors",
+                "type": "ccColor4B"
+            },
+            {
+                "name": "texCoords",
+                "type": "ccTex2F"
+            }
+        ]
+    },
+    "_ccV2F_C4B_T2F_Triangle": {
+        "name": "_ccV2F_C4B_T2F_Triangle",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "a",
+                "type": "ccV2F_C4B_T2F"
+            },
+            {
+                "name": "b",
+                "type": "ccV2F_C4B_T2F"
+            },
+            {
+                "name": "c",
+                "type": "ccV2F_C4B_T2F"
+            }
+        ]
+    },
+    "_ccV2F_C4B_T2F_Quad": {
+        "name": "_ccV2F_C4B_T2F_Quad",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "bl",
+                "type": "ccV2F_C4B_T2F"
+            },
+            {
+                "name": "br",
+                "type": "ccV2F_C4B_T2F"
+            },
+            {
+                "name": "tl",
+                "type": "ccV2F_C4B_T2F"
+            },
+            {
+                "name": "tr",
+                "type": "ccV2F_C4B_T2F"
+            }
+        ]
+    },
+    "_ccV3F_C4B_T2F_Quad": {
+        "name": "_ccV3F_C4B_T2F_Quad",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "tl",
+                "type": "ccV3F_C4B_T2F"
+            },
+            {
+                "name": "bl",
+                "type": "ccV3F_C4B_T2F"
+            },
+            {
+                "name": "tr",
+                "type": "ccV3F_C4B_T2F"
+            },
+            {
+                "name": "br",
+                "type": "ccV3F_C4B_T2F"
+            }
+        ]
+    },
+    "_ccV2F_C4F_T2F_Quad": {
+        "name": "_ccV2F_C4F_T2F_Quad",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "bl",
+                "type": "ccV2F_C4F_T2F"
+            },
+            {
+                "name": "br",
+                "type": "ccV2F_C4F_T2F"
+            },
+            {
+                "name": "tl",
+                "type": "ccV2F_C4F_T2F"
+            },
+            {
+                "name": "tr",
+                "type": "ccV2F_C4F_T2F"
+            }
+        ]
+    },
+    "_ccBlendFunc": {
+        "name": "_ccBlendFunc",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "src",
+                "type": "GLenum"
+            },
+            {
+                "name": "dst",
+                "type": "GLenum"
+            }
+        ]
+    },
+    "_ccT2F_Quad": {
+        "name": "_ccT2F_Quad",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "bl",
+                "type": "ccTex2F"
+            },
+            {
+                "name": "br",
+                "type": "ccTex2F"
+            },
+            {
+                "name": "tl",
+                "type": "ccTex2F"
+            },
+            {
+                "name": "tr",
+                "type": "ccTex2F"
+            }
+        ]
+    },
+    "_ccFontShadow": {
+        "name": "_ccFontShadow",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_shadowEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_shadowOffset",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_shadowBlur",
+                "type": "float"
+            },
+            {
+                "name": "m_shadowOpacity",
+                "type": "float"
+            }
+        ]
+    },
+    "_ccFontStroke": {
+        "name": "_ccFontStroke",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_strokeEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_strokeColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_strokeSize",
+                "type": "float"
+            }
+        ]
+    },
+    "_ccFontDefinition": {
+        "name": "_ccFontDefinition",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_fontName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_fontSize",
+                "type": "int"
+            },
+            {
+                "name": "m_alignment",
+                "type": "CCTextAlignment"
+            },
+            {
+                "name": "m_vertAlignment",
+                "type": "CCVerticalTextAlignment"
+            },
+            {
+                "name": "m_dimensions",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_fontFillColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_shadow",
+                "type": "ccFontShadow"
+            },
+            {
+                "name": "m_stroke",
+                "type": "ccFontStroke"
+            }
+        ]
+    },
+    "_ccTexParams": {
+        "name": "_ccTexParams",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "minFilter",
+                "type": "GLuint"
+            },
+            {
+                "name": "magFilter",
+                "type": "GLuint"
+            },
+            {
+                "name": "wrapS",
+                "type": "GLuint"
+            },
+            {
+                "name": "wrapT",
+                "type": "GLuint"
+            }
+        ]
+    },
+    "CCTexture2D": {
+        "name": "CCTexture2D",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_bPVRHaveAlphaPremultiplied",
+                "type": "bool"
+            },
+            {
+                "name": "m_ePixelFormat",
+                "type": "CCTexture2DPixelFormat"
+            },
+            {
+                "name": "m_uPixelsWide",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uPixelsHigh",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uName",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_fMaxS",
+                "type": "GLfloat"
+            },
+            {
+                "name": "m_fMaxT",
+                "type": "GLfloat"
+            },
+            {
+                "name": "m_tContentSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_bHasPremultipliedAlpha",
+                "type": "bool"
+            },
+            {
+                "name": "m_bHasMipmaps",
+                "type": "bool"
+            },
+            {
+                "name": "m_pShaderProgram",
+                "type": "CCGLProgram*"
+            }
+        ]
+    },
+    "CCRGBAProtocol": {
+        "name": "CCRGBAProtocol",
+        "subclasses": [],
+        "members": []
+    },
+    "CCBlendProtocol": {
+        "name": "CCBlendProtocol",
+        "subclasses": [],
+        "members": []
+    },
+    "CCTextureProtocol": {
+        "name": "CCTextureProtocol",
+        "subclasses": [
+            "CCBlendProtocol"
+        ],
+        "members": []
+    },
+    "CCLabelProtocol": {
+        "name": "CCLabelProtocol",
+        "subclasses": [],
+        "members": []
+    },
+    "CCDirectorDelegate": {
+        "name": "CCDirectorDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCNode": {
+        "name": "CCNode",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_fRotationX",
+                "type": "float"
+            },
+            {
+                "name": "m_fRotationY",
+                "type": "float"
+            },
+            {
+                "name": "m_fScaleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fScaleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fVertexZ",
+                "type": "float"
+            },
+            {
+                "name": "m_obPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_fSkewX",
+                "type": "float"
+            },
+            {
+                "name": "m_fSkewY",
+                "type": "float"
+            },
+            {
+                "name": "m_obAnchorPointInPoints",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_obAnchorPoint",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_obContentSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_sAdditionalTransform",
+                "type": "CCAffineTransform"
+            },
+            {
+                "name": "m_sTransform",
+                "type": "CCAffineTransform"
+            },
+            {
+                "name": "m_sInverse",
+                "type": "CCAffineTransform"
+            },
+            {
+                "name": "m_pCamera",
+                "type": "CCCamera*"
+            },
+            {
+                "name": "m_pGrid",
+                "type": "CCGridBase*"
+            },
+            {
+                "name": "m_nZOrder",
+                "type": "int"
+            },
+            {
+                "name": "m_pChildren",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pParent",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_pUserData",
+                "type": "void*"
+            },
+            {
+                "name": "m_pUserObject",
+                "type": "CCObject*"
+            },
+            {
+                "name": "m_pShaderProgram",
+                "type": "CCGLProgram*"
+            },
+            {
+                "name": "m_eGLServerState",
+                "type": "ccGLServerState"
+            },
+            {
+                "name": "m_uOrderOfArrival",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pScheduler",
+                "type": "CCScheduler*"
+            },
+            {
+                "name": "m_pActionManager",
+                "type": "CCActionManager*"
+            },
+            {
+                "name": "m_bRunning",
+                "type": "bool"
+            },
+            {
+                "name": "m_bTransformDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_bInverseDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_bAdditionalTransformDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_bVisible",
+                "type": "bool"
+            },
+            {
+                "name": "m_bIgnoreAnchorPointForPosition",
+                "type": "bool"
+            },
+            {
+                "name": "m_bReorderChildDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_nScriptHandler",
+                "type": "int"
+            },
+            {
+                "name": "m_nUpdateScriptHandler",
+                "type": "int"
+            },
+            {
+                "name": "m_eScriptType",
+                "type": "ccScriptType"
+            },
+            {
+                "name": "m_pComponentContainer",
+                "type": "CCComponentContainer*"
+            }
+        ]
+    },
+    "CCNodeRGBA": {
+        "name": "CCNodeRGBA",
+        "subclasses": [
+            "CCNode",
+            "CCRGBAProtocol"
+        ],
+        "members": [
+            {
+                "name": "_displayedOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "_realOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "_displayedColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "_realColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "_cascadeColorEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "_cascadeOpacityEnabled",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCSpriteFrame": {
+        "name": "CCSpriteFrame",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_obOffset",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_obOriginalSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_obRectInPixels",
+                "type": "CCRect"
+            },
+            {
+                "name": "m_bRotated",
+                "type": "bool"
+            },
+            {
+                "name": "m_obRect",
+                "type": "CCRect"
+            },
+            {
+                "name": "m_obOffsetInPixels",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_obOriginalSizeInPixels",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_pobTexture",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_strTextureFilename",
+                "type": "std::string"
+            }
+        ]
+    },
+    "UT_hash_bucket": {
+        "name": "UT_hash_bucket",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "hh_head",
+                "type": "struct UT_hash_handle*"
+            },
+            {
+                "name": "count",
+                "type": "unsigned"
+            },
+            {
+                "name": "expand_mult",
+                "type": "unsigned"
+            }
+        ]
+    },
+    "UT_hash_table": {
+        "name": "UT_hash_table",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "buckets",
+                "type": "UT_hash_bucket*"
+            },
+            {
+                "name": "num_buckets",
+                "type": "unsigned"
+            },
+            {
+                "name": "log2_num_buckets",
+                "type": "unsigned"
+            },
+            {
+                "name": "num_items",
+                "type": "unsigned"
+            },
+            {
+                "name": "tail",
+                "type": "struct UT_hash_handle*"
+            },
+            {
+                "name": "hho",
+                "type": "ptrdiff_t"
+            },
+            {
+                "name": "ideal_chain_maxlen",
+                "type": "unsigned"
+            },
+            {
+                "name": "nonideal_items",
+                "type": "unsigned"
+            },
+            {
+                "name": "ineff_expands",
+                "type": "unsigned"
+            },
+            {
+                "name": "noexpand",
+                "type": "unsigned"
+            },
+            {
+                "name": "signature",
+                "type": "uint32_t"
+            }
+        ]
+    },
+    "UT_hash_handle": {
+        "name": "UT_hash_handle",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "tbl",
+                "type": "struct UT_hash_table*"
+            },
+            {
+                "name": "prev",
+                "type": "void*"
+            },
+            {
+                "name": "next",
+                "type": "void*"
+            },
+            {
+                "name": "hh_prev",
+                "type": "struct UT_hash_handle*"
+            },
+            {
+                "name": "hh_next",
+                "type": "struct UT_hash_handle*"
+            },
+            {
+                "name": "key",
+                "type": "void*"
+            },
+            {
+                "name": "keylen",
+                "type": "unsigned"
+            },
+            {
+                "name": "hashv",
+                "type": "unsigned"
+            }
+        ]
+    },
+    "CCString": {
+        "name": "CCString",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_sString",
+                "type": "std::string"
+            }
+        ]
+    },
+    "CCDictElement": {
+        "name": "CCDictElement",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_szKey",
+                "type": "char[256]"
+            },
+            {
+                "name": "m_iKey",
+                "type": "intptr_t"
+            },
+            {
+                "name": "m_pObject",
+                "type": "CCObject*"
+            },
+            {
+                "name": "hh",
+                "type": "UT_hash_handle"
+            }
+        ]
+    },
+    "CCDictionary": {
+        "name": "CCDictionary",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pElements",
+                "type": "CCDictElement*"
+            },
+            {
+                "name": "m_eDictType",
+                "type": "CCDictType"
+            }
+        ]
+    },
+    "CCAnimationFrame": {
+        "name": "CCAnimationFrame",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pSpriteFrame",
+                "type": "CCSpriteFrame*"
+            },
+            {
+                "name": "m_fDelayUnits",
+                "type": "float"
+            },
+            {
+                "name": "m_pUserInfo",
+                "type": "CCDictionary*"
+            }
+        ]
+    },
+    "CCAnimation": {
+        "name": "CCAnimation",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_fTotalDelayUnits",
+                "type": "float"
+            },
+            {
+                "name": "m_fDelayPerUnit",
+                "type": "float"
+            },
+            {
+                "name": "m_fDuration",
+                "type": "float"
+            },
+            {
+                "name": "m_pFrames",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_bRestoreOriginalFrame",
+                "type": "bool"
+            },
+            {
+                "name": "m_uLoops",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "CCActionInterval": {
+        "name": "CCActionInterval",
+        "subclasses": [
+            "CCFiniteTimeAction"
+        ],
+        "members": [
+            {
+                "name": "m_elapsed",
+                "type": "float"
+            },
+            {
+                "name": "m_bFirstTick",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCSequence": {
+        "name": "CCSequence",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pActions",
+                "type": "CCFiniteTimeAction*[2]"
+            },
+            {
+                "name": "m_split",
+                "type": "float"
+            },
+            {
+                "name": "m_last",
+                "type": "int"
+            }
+        ]
+    },
+    "CCRepeat": {
+        "name": "CCRepeat",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_uTimes",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uTotal",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fNextDt",
+                "type": "float"
+            },
+            {
+                "name": "m_bActionInstant",
+                "type": "bool"
+            },
+            {
+                "name": "m_pInnerAction",
+                "type": "CCFiniteTimeAction*"
+            }
+        ]
+    },
+    "CCRepeatForever": {
+        "name": "CCRepeatForever",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pInnerAction",
+                "type": "CCActionInterval*"
+            }
+        ]
+    },
+    "CCSpawn": {
+        "name": "CCSpawn",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pOne",
+                "type": "CCFiniteTimeAction*"
+            },
+            {
+                "name": "m_pTwo",
+                "type": "CCFiniteTimeAction*"
+            }
+        ]
+    },
+    "CCRotateTo": {
+        "name": "CCRotateTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fDstAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fDiffAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fDstAngleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartAngleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fDiffAngleY",
+                "type": "float"
+            }
+        ]
+    },
+    "CCRotateBy": {
+        "name": "CCRotateBy",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fAngleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartAngleY",
+                "type": "float"
+            }
+        ]
+    },
+    "CCMoveBy": {
+        "name": "CCMoveBy",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_positionDelta",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_startPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_previousPosition",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCMoveTo": {
+        "name": "CCMoveTo",
+        "subclasses": [
+            "CCMoveBy"
+        ],
+        "members": [
+            {
+                "name": "m_endPosition",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCSkewTo": {
+        "name": "CCSkewTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fSkewX",
+                "type": "float"
+            },
+            {
+                "name": "m_fSkewY",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartSkewX",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartSkewY",
+                "type": "float"
+            },
+            {
+                "name": "m_fEndSkewX",
+                "type": "float"
+            },
+            {
+                "name": "m_fEndSkewY",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaX",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaY",
+                "type": "float"
+            }
+        ]
+    },
+    "CCSkewBy": {
+        "name": "CCSkewBy",
+        "subclasses": [
+            "CCSkewTo"
+        ],
+        "members": []
+    },
+    "CCJumpBy": {
+        "name": "CCJumpBy",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_startPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_delta",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_height",
+                "type": "float"
+            },
+            {
+                "name": "m_nJumps",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_previousPos",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCJumpTo": {
+        "name": "CCJumpTo",
+        "subclasses": [
+            "CCJumpBy"
+        ],
+        "members": []
+    },
+    "_ccBezierConfig": {
+        "name": "_ccBezierConfig",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "endPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "controlPoint_1",
+                "type": "CCPoint"
+            },
+            {
+                "name": "controlPoint_2",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCBezierBy": {
+        "name": "CCBezierBy",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_sConfig",
+                "type": "ccBezierConfig"
+            },
+            {
+                "name": "m_startPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_previousPosition",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCBezierTo": {
+        "name": "CCBezierTo",
+        "subclasses": [
+            "CCBezierBy"
+        ],
+        "members": [
+            {
+                "name": "m_sToConfig",
+                "type": "ccBezierConfig"
+            }
+        ]
+    },
+    "CCScaleTo": {
+        "name": "CCScaleTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fScaleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fScaleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartScaleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fStartScaleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fEndScaleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fEndScaleY",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaX",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaY",
+                "type": "float"
+            }
+        ]
+    },
+    "CCScaleBy": {
+        "name": "CCScaleBy",
+        "subclasses": [
+            "CCScaleTo"
+        ],
+        "members": []
+    },
+    "CCBlink": {
+        "name": "CCBlink",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_nTimes",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_bOriginalState",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCFadeIn": {
+        "name": "CCFadeIn",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": []
+    },
+    "CCFadeOut": {
+        "name": "CCFadeOut",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": []
+    },
+    "CCFadeTo": {
+        "name": "CCFadeTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_toOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "m_fromOpacity",
+                "type": "GLubyte"
+            }
+        ]
+    },
+    "CCTintTo": {
+        "name": "CCTintTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_to",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_from",
+                "type": "ccColor3B"
+            }
+        ]
+    },
+    "CCTintBy": {
+        "name": "CCTintBy",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_deltaR",
+                "type": "GLshort"
+            },
+            {
+                "name": "m_deltaG",
+                "type": "GLshort"
+            },
+            {
+                "name": "m_deltaB",
+                "type": "GLshort"
+            },
+            {
+                "name": "m_fromR",
+                "type": "GLshort"
+            },
+            {
+                "name": "m_fromG",
+                "type": "GLshort"
+            },
+            {
+                "name": "m_fromB",
+                "type": "GLshort"
+            }
+        ]
+    },
+    "CCDelayTime": {
+        "name": "CCDelayTime",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": []
+    },
+    "CCReverseTime": {
+        "name": "CCReverseTime",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pOther",
+                "type": "CCFiniteTimeAction*"
+            }
+        ]
+    },
+    "CCAnimate": {
+        "name": "CCAnimate",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pAnimation",
+                "type": "CCAnimation*"
+            },
+            {
+                "name": "m_pSplitTimes",
+                "type": "std::vector<float>*"
+            },
+            {
+                "name": "m_nNextFrame",
+                "type": "int"
+            },
+            {
+                "name": "m_pOrigFrame",
+                "type": "CCSpriteFrame*"
+            },
+            {
+                "name": "m_uExecutedLoops",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "CCTargetedAction": {
+        "name": "CCTargetedAction",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pForcedTarget",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_pAction",
+                "type": "CCFiniteTimeAction*"
+            }
+        ]
+    },
+    "CCActionCamera": {
+        "name": "CCActionCamera",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fCenterXOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fCenterYOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fCenterZOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fEyeXOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fEyeYOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fEyeZOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fUpXOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fUpYOrig",
+                "type": "float"
+            },
+            {
+                "name": "m_fUpZOrig",
+                "type": "float"
+            }
+        ]
+    },
+    "CCOrbitCamera": {
+        "name": "CCOrbitCamera",
+        "subclasses": [
+            "CCActionCamera"
+        ],
+        "members": [
+            {
+                "name": "m_fRadius",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaRadius",
+                "type": "float"
+            },
+            {
+                "name": "m_fAngleZ",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaAngleZ",
+                "type": "float"
+            },
+            {
+                "name": "m_fAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fDeltaAngleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fRadZ",
+                "type": "float"
+            },
+            {
+                "name": "m_fRadDeltaZ",
+                "type": "float"
+            },
+            {
+                "name": "m_fRadX",
+                "type": "float"
+            },
+            {
+                "name": "m_fRadDeltaX",
+                "type": "float"
+            }
+        ]
+    },
+    "CCActionManager": {
+        "name": "CCActionManager",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pTargets",
+                "type": "struct _hashElement*"
+            },
+            {
+                "name": "m_pCurrentTarget",
+                "type": "struct _hashElement*"
+            },
+            {
+                "name": "m_bCurrentTargetSalvaged",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCActionEase": {
+        "name": "CCActionEase",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pInner",
+                "type": "CCActionInterval*"
+            }
+        ]
+    },
+    "CCEaseRateAction": {
+        "name": "CCEaseRateAction",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": [
+            {
+                "name": "m_fRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCEaseIn": {
+        "name": "CCEaseIn",
+        "subclasses": [
+            "CCEaseRateAction"
+        ],
+        "members": []
+    },
+    "CCEaseOut": {
+        "name": "CCEaseOut",
+        "subclasses": [
+            "CCEaseRateAction"
+        ],
+        "members": []
+    },
+    "CCEaseInOut": {
+        "name": "CCEaseInOut",
+        "subclasses": [
+            "CCEaseRateAction"
+        ],
+        "members": []
+    },
+    "CCEaseExponentialIn": {
+        "name": "CCEaseExponentialIn",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseExponentialOut": {
+        "name": "CCEaseExponentialOut",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseExponentialInOut": {
+        "name": "CCEaseExponentialInOut",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseSineIn": {
+        "name": "CCEaseSineIn",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseSineOut": {
+        "name": "CCEaseSineOut",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseSineInOut": {
+        "name": "CCEaseSineInOut",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseElastic": {
+        "name": "CCEaseElastic",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": [
+            {
+                "name": "m_fPeriod",
+                "type": "float"
+            }
+        ]
+    },
+    "CCEaseElasticIn": {
+        "name": "CCEaseElasticIn",
+        "subclasses": [
+            "CCEaseElastic"
+        ],
+        "members": []
+    },
+    "CCEaseElasticOut": {
+        "name": "CCEaseElasticOut",
+        "subclasses": [
+            "CCEaseElastic"
+        ],
+        "members": []
+    },
+    "CCEaseElasticInOut": {
+        "name": "CCEaseElasticInOut",
+        "subclasses": [
+            "CCEaseElastic"
+        ],
+        "members": []
+    },
+    "CCEaseBounce": {
+        "name": "CCEaseBounce",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseBounceIn": {
+        "name": "CCEaseBounceIn",
+        "subclasses": [
+            "CCEaseBounce"
+        ],
+        "members": []
+    },
+    "CCEaseBounceOut": {
+        "name": "CCEaseBounceOut",
+        "subclasses": [
+            "CCEaseBounce"
+        ],
+        "members": []
+    },
+    "CCEaseBounceInOut": {
+        "name": "CCEaseBounceInOut",
+        "subclasses": [
+            "CCEaseBounce"
+        ],
+        "members": []
+    },
+    "CCEaseBackIn": {
+        "name": "CCEaseBackIn",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseBackOut": {
+        "name": "CCEaseBackOut",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "CCEaseBackInOut": {
+        "name": "CCEaseBackInOut",
+        "subclasses": [
+            "CCActionEase"
+        ],
+        "members": []
+    },
+    "TypeInfo": {
+        "name": "TypeInfo",
+        "subclasses": [],
+        "members": []
+    },
+    "CCActionInstant": {
+        "name": "CCActionInstant",
+        "subclasses": [
+            "CCFiniteTimeAction"
+        ],
+        "members": []
+    },
+    "CCShow": {
+        "name": "CCShow",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": []
+    },
+    "CCHide": {
+        "name": "CCHide",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": []
+    },
+    "CCToggleVisibility": {
+        "name": "CCToggleVisibility",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": []
+    },
+    "CCRemoveSelf": {
+        "name": "CCRemoveSelf",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": [
+            {
+                "name": "m_bIsNeedCleanUp",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCFlipX": {
+        "name": "CCFlipX",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": [
+            {
+                "name": "m_bFlipX",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCFlipY": {
+        "name": "CCFlipY",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": [
+            {
+                "name": "m_bFlipY",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCPlace": {
+        "name": "CCPlace",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": [
+            {
+                "name": "m_tPosition",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCCallFunc": {
+        "name": "CCCallFunc",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": [
+            {
+                "name": "m_pSelectorTarget",
+                "type": "CCObject*"
+            },
+            {
+                "name": "m_nScriptHandler",
+                "type": "int"
+            },
+            {
+                "name": "m_pCallFunc",
+                "type": "SEL_CallFunc"
+            },
+            {
+                "name": "m_pCallFuncN",
+                "type": "SEL_CallFuncN"
+            },
+            {
+                "name": "m_pCallFuncND",
+                "type": "SEL_CallFuncND"
+            },
+            {
+                "name": "m_pCallFuncO",
+                "type": "SEL_CallFuncO"
+            }
+        ]
+    },
+    "CCCallFuncN": {
+        "name": "CCCallFuncN",
+        "subclasses": [
+            "CCCallFunc",
+            "TypeInfo"
+        ],
+        "members": []
+    },
+    "CCCallFuncND": {
+        "name": "CCCallFuncND",
+        "subclasses": [
+            "CCCallFuncN"
+        ],
+        "members": [
+            {
+                "name": "m_pData",
+                "type": "void*"
+            }
+        ]
+    },
+    "CCCallFuncO": {
+        "name": "CCCallFuncO",
+        "subclasses": [
+            "CCCallFunc",
+            "TypeInfo"
+        ],
+        "members": [
+            {
+                "name": "m_pObject",
+                "type": "CCObject*"
+            }
+        ]
+    },
+    "CCGridAction": {
+        "name": "CCGridAction",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_sGridSize",
+                "type": "CCSize"
+            }
+        ]
+    },
+    "CCGrid3DAction": {
+        "name": "CCGrid3DAction",
+        "subclasses": [
+            "CCGridAction"
+        ],
+        "members": []
+    },
+    "CCTiledGrid3DAction": {
+        "name": "CCTiledGrid3DAction",
+        "subclasses": [
+            "CCGridAction"
+        ],
+        "members": []
+    },
+    "CCAccelDeccelAmplitude": {
+        "name": "CCAccelDeccelAmplitude",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fRate",
+                "type": "float"
+            },
+            {
+                "name": "m_pOther",
+                "type": "CCActionInterval*"
+            }
+        ]
+    },
+    "CCAccelAmplitude": {
+        "name": "CCAccelAmplitude",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fRate",
+                "type": "float"
+            },
+            {
+                "name": "m_pOther",
+                "type": "CCActionInterval*"
+            }
+        ]
+    },
+    "CCDeccelAmplitude": {
+        "name": "CCDeccelAmplitude",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fRate",
+                "type": "float"
+            },
+            {
+                "name": "m_pOther",
+                "type": "CCActionInterval*"
+            }
+        ]
+    },
+    "CCStopGrid": {
+        "name": "CCStopGrid",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": []
+    },
+    "CCReuseGrid": {
+        "name": "CCReuseGrid",
+        "subclasses": [
+            "CCActionInstant"
+        ],
+        "members": [
+            {
+                "name": "m_nTimes",
+                "type": "int"
+            }
+        ]
+    },
+    "CCWaves3D": {
+        "name": "CCWaves3D",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nWaves",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCFlipX3D": {
+        "name": "CCFlipX3D",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": []
+    },
+    "CCFlipY3D": {
+        "name": "CCFlipY3D",
+        "subclasses": [
+            "CCFlipX3D"
+        ],
+        "members": []
+    },
+    "CCLens3D": {
+        "name": "CCLens3D",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_position",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_fRadius",
+                "type": "float"
+            },
+            {
+                "name": "m_fLensEffect",
+                "type": "float"
+            },
+            {
+                "name": "m_bConcave",
+                "type": "bool"
+            },
+            {
+                "name": "m_bDirty",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCRipple3D": {
+        "name": "CCRipple3D",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_position",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_fRadius",
+                "type": "float"
+            },
+            {
+                "name": "m_nWaves",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCShaky3D": {
+        "name": "CCShaky3D",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nRandrange",
+                "type": "int"
+            },
+            {
+                "name": "m_bShakeZ",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCLiquid": {
+        "name": "CCLiquid",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nWaves",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCWaves": {
+        "name": "CCWaves",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nWaves",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            },
+            {
+                "name": "m_bVertical",
+                "type": "bool"
+            },
+            {
+                "name": "m_bHorizontal",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCTwirl": {
+        "name": "CCTwirl",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_position",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_nTwirls",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCPageTurn3D": {
+        "name": "CCPageTurn3D",
+        "subclasses": [
+            "CCGrid3DAction"
+        ],
+        "members": []
+    },
+    "CCProgressTo": {
+        "name": "CCProgressTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fTo",
+                "type": "float"
+            },
+            {
+                "name": "m_fFrom",
+                "type": "float"
+            }
+        ]
+    },
+    "CCProgressFromTo": {
+        "name": "CCProgressFromTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_fTo",
+                "type": "float"
+            },
+            {
+                "name": "m_fFrom",
+                "type": "float"
+            }
+        ]
+    },
+    "CCShakyTiles3D": {
+        "name": "CCShakyTiles3D",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nRandrange",
+                "type": "int"
+            },
+            {
+                "name": "m_bShakeZ",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCShatteredTiles3D": {
+        "name": "CCShatteredTiles3D",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nRandrange",
+                "type": "int"
+            },
+            {
+                "name": "m_bOnce",
+                "type": "bool"
+            },
+            {
+                "name": "m_bShatterZ",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCShuffleTiles": {
+        "name": "CCShuffleTiles",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nSeed",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nTilesCount",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pTilesOrder",
+                "type": "unsigned int*"
+            },
+            {
+                "name": "m_pTiles",
+                "type": "Tile*"
+            }
+        ]
+    },
+    "CCFadeOutTRTiles": {
+        "name": "CCFadeOutTRTiles",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": []
+    },
+    "CCFadeOutBLTiles": {
+        "name": "CCFadeOutBLTiles",
+        "subclasses": [
+            "CCFadeOutTRTiles"
+        ],
+        "members": []
+    },
+    "CCFadeOutUpTiles": {
+        "name": "CCFadeOutUpTiles",
+        "subclasses": [
+            "CCFadeOutTRTiles"
+        ],
+        "members": []
+    },
+    "CCFadeOutDownTiles": {
+        "name": "CCFadeOutDownTiles",
+        "subclasses": [
+            "CCFadeOutUpTiles"
+        ],
+        "members": []
+    },
+    "CCTurnOffTiles": {
+        "name": "CCTurnOffTiles",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nSeed",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nTilesCount",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pTilesOrder",
+                "type": "unsigned int*"
+            }
+        ]
+    },
+    "CCWavesTiles3D": {
+        "name": "CCWavesTiles3D",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nWaves",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCJumpTiles3D": {
+        "name": "CCJumpTiles3D",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nJumps",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fAmplitude",
+                "type": "float"
+            },
+            {
+                "name": "m_fAmplitudeRate",
+                "type": "float"
+            }
+        ]
+    },
+    "CCSplitRows": {
+        "name": "CCSplitRows",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nRows",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_winSize",
+                "type": "CCSize"
+            }
+        ]
+    },
+    "CCSplitCols": {
+        "name": "CCSplitCols",
+        "subclasses": [
+            "CCTiledGrid3DAction"
+        ],
+        "members": [
+            {
+                "name": "m_nCols",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_winSize",
+                "type": "CCSize"
+            }
+        ]
+    },
+    "CCActionTweenDelegate": {
+        "name": "CCActionTweenDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCActionTween": {
+        "name": "CCActionTween",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_strKey",
+                "type": "std::string"
+            },
+            {
+                "name": "m_fFrom",
+                "type": "float"
+            },
+            {
+                "name": "m_fTo",
+                "type": "float"
+            },
+            {
+                "name": "m_fDelta",
+                "type": "float"
+            }
+        ]
+    },
+    "CCPointArray": {
+        "name": "CCPointArray",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pControlPoints",
+                "type": "std::vector<CCPoint*>*"
+            }
+        ]
+    },
+    "CCCardinalSplineTo": {
+        "name": "CCCardinalSplineTo",
+        "subclasses": [
+            "CCActionInterval"
+        ],
+        "members": [
+            {
+                "name": "m_pPoints",
+                "type": "CCPointArray*"
+            },
+            {
+                "name": "m_fDeltaT",
+                "type": "float"
+            },
+            {
+                "name": "m_fTension",
+                "type": "float"
+            },
+            {
+                "name": "m_previousPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_accumulatedDiff",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCCardinalSplineBy": {
+        "name": "CCCardinalSplineBy",
+        "subclasses": [
+            "CCCardinalSplineTo"
+        ],
+        "members": [
+            {
+                "name": "m_startPosition",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCCatmullRomTo": {
+        "name": "CCCatmullRomTo",
+        "subclasses": [
+            "CCCardinalSplineTo"
+        ],
+        "members": []
+    },
+    "CCCatmullRomBy": {
+        "name": "CCCatmullRomBy",
+        "subclasses": [
+            "CCCardinalSplineBy"
+        ],
+        "members": []
+    },
+    "CCAtlasNode": {
+        "name": "CCAtlasNode",
+        "subclasses": [
+            "CCNodeRGBA",
+            "CCTextureProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_uItemsPerRow",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uItemsPerColumn",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uItemWidth",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uItemHeight",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_tColorUnmodified",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_pTextureAtlas",
+                "type": "CCTextureAtlas*"
+            },
+            {
+                "name": "m_bIsOpacityModifyRGB",
+                "type": "bool"
+            },
+            {
+                "name": "m_tBlendFunc",
+                "type": "ccBlendFunc"
+            },
+            {
+                "name": "m_uQuadsToDraw",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nUniformColor",
+                "type": "GLint"
+            },
+            {
+                "name": "m_bIgnoreContentScaleFactor",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCAutoreleasePool": {
+        "name": "CCAutoreleasePool",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pManagedObjectArray",
+                "type": "CCArray*"
+            }
+        ]
+    },
+    "CCPoolManager": {
+        "name": "CCPoolManager",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pReleasePoolStack",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pCurReleasePool",
+                "type": "CCAutoreleasePool*"
+            }
+        ]
+    },
+    "CCInteger": {
+        "name": "CCInteger",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_nValue",
+                "type": "int"
+            }
+        ]
+    },
+    "CCFloat": {
+        "name": "CCFloat",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_fValue",
+                "type": "float"
+            }
+        ]
+    },
+    "CCDouble": {
+        "name": "CCDouble",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_dValue",
+                "type": "double"
+            }
+        ]
+    },
+    "CCBool": {
+        "name": "CCBool",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_bValue",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCZone": {
+        "name": "CCZone",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pCopyObject",
+                "type": "CCObject*"
+            }
+        ]
+    },
+    "CCDrawNode": {
+        "name": "CCDrawNode",
+        "subclasses": [
+            "CCNode"
+        ],
+        "members": [
+            {
+                "name": "m_uVao",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_uVbo",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_uBufferCapacity",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nBufferCount",
+                "type": "GLsizei"
+            },
+            {
+                "name": "m_pBuffer",
+                "type": "ccV2F_C4B_T2F*"
+            },
+            {
+                "name": "m_sBlendFunc",
+                "type": "ccBlendFunc"
+            },
+            {
+                "name": "m_bDirty",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCConfiguration": {
+        "name": "CCConfiguration",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "s_gSharedConfiguration",
+                "type": "CCConfiguration*"
+            },
+            {
+                "name": "s_sConfigfile",
+                "type": "std::string"
+            },
+            {
+                "name": "m_nMaxTextureSize",
+                "type": "GLint"
+            },
+            {
+                "name": "m_nMaxModelviewStackDepth",
+                "type": "GLint"
+            },
+            {
+                "name": "m_bSupportsPVRTC",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSupportsNPOT",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSupportsBGRA8888",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSupportsDiscardFramebuffer",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSupportsShareableVAO",
+                "type": "bool"
+            },
+            {
+                "name": "m_nMaxSamplesAllowed",
+                "type": "GLint"
+            },
+            {
+                "name": "m_nMaxTextureUnits",
+                "type": "GLint"
+            },
+            {
+                "name": "m_pGlExtensions",
+                "type": "char*"
+            },
+            {
+                "name": "m_pValueDict",
+                "type": "CCDictionary*"
+            }
+        ]
+    },
+    "CCGrabber": {
+        "name": "CCGrabber",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_FBO",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_oldFBO",
+                "type": "GLint"
+            },
+            {
+                "name": "m_oldClearColor",
+                "type": "GLfloat[4]"
+            }
+        ]
+    },
+    "CCCamera": {
+        "name": "CCCamera",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_fEyeX",
+                "type": "float"
+            },
+            {
+                "name": "m_fEyeY",
+                "type": "float"
+            },
+            {
+                "name": "m_fEyeZ",
+                "type": "float"
+            },
+            {
+                "name": "m_fCenterX",
+                "type": "float"
+            },
+            {
+                "name": "m_fCenterY",
+                "type": "float"
+            },
+            {
+                "name": "m_fCenterZ",
+                "type": "float"
+            },
+            {
+                "name": "m_fUpX",
+                "type": "float"
+            },
+            {
+                "name": "m_fUpY",
+                "type": "float"
+            },
+            {
+                "name": "m_fUpZ",
+                "type": "float"
+            },
+            {
+                "name": "m_bDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_lookupMatrix",
+                "type": "kmMat4"
+            }
+        ]
+    },
+    "CCLabelAtlas": {
+        "name": "CCLabelAtlas",
+        "subclasses": [
+            "CCAtlasNode",
+            "CCLabelProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_sString",
+                "type": "std::string"
+            },
+            {
+                "name": "m_uMapStartChar",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "CCDirector": {
+        "name": "CCDirector",
+        "subclasses": [
+            "CCObject",
+            "TypeInfo"
+        ],
+        "members": [
+            {
+                "name": "m_fScreenScaleFactor",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenScaleFactorMax",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenScaleFactorW",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenScaleFactorH",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenTop",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenBottom",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenLeft",
+                "type": "float"
+            },
+            {
+                "name": "m_fScreenRight",
+                "type": "float"
+            },
+            {
+                "name": "m_pSceneReference",
+                "type": "CCScene*"
+            },
+            {
+                "name": "m_pScheduler",
+                "type": "CCScheduler*"
+            },
+            {
+                "name": "m_pActionManager",
+                "type": "CCActionManager*"
+            },
+            {
+                "name": "m_pTouchDispatcher",
+                "type": "CCTouchDispatcher*"
+            },
+            {
+                "name": "m_pKeypadDispatcher",
+                "type": "CCKeypadDispatcher*"
+            },
+            {
+                "name": "m_pKeyboardDispatcher",
+                "type": "CCKeyboardDispatcher*"
+            },
+            {
+                "name": "m_pMouseDispatcher",
+                "type": "CCMouseDispatcher*"
+            },
+            {
+                "name": "m_pAccelerometer",
+                "type": "CCAccelerometer*"
+            },
+            {
+                "name": "m_fDeltaTime",
+                "type": "float"
+            },
+            {
+                "name": "m_fActualDeltaTime",
+                "type": "float"
+            },
+            {
+                "name": "m_bIsTransitioning",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSmoothFix",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSmoothFixCheck",
+                "type": "bool"
+            },
+            {
+                "name": "m_bForceSmoothFix",
+                "type": "bool"
+            },
+            {
+                "name": "m_nSmoothFixCounter",
+                "type": "int"
+            },
+            {
+                "name": "m_bPurgeDirecotorInNextLoop",
+                "type": "bool"
+            },
+            {
+                "name": "m_pobOpenGLView",
+                "type": "CCEGLView*"
+            },
+            {
+                "name": "pad463",
+                "type": "char[0x4]"
+            },
+            {
+                "name": "m_dAnimationInterval",
+                "type": "double"
+            },
+            {
+                "name": "m_dOldAnimationInterval",
+                "type": "double"
+            },
+            {
+                "name": "m_bLandscape",
+                "type": "bool"
+            },
+            {
+                "name": "m_bDisplayStats",
+                "type": "bool"
+            },
+            {
+                "name": "m_fAccumDt",
+                "type": "float"
+            },
+            {
+                "name": "m_fFrameRate",
+                "type": "float"
+            },
+            {
+                "name": "m_pFPSLabel",
+                "type": "CCLabelAtlas*"
+            },
+            {
+                "name": "m_pSPFLabel",
+                "type": "CCLabelAtlas*"
+            },
+            {
+                "name": "m_pDrawsLabel",
+                "type": "CCLabelAtlas*"
+            },
+            {
+                "name": "m_bPaused",
+                "type": "bool"
+            },
+            {
+                "name": "m_uTotalFrames",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uFrames",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fSecondsPerFrame",
+                "type": "float"
+            },
+            {
+                "name": "m_pRunningScene",
+                "type": "CCScene*"
+            },
+            {
+                "name": "m_pNextScene",
+                "type": "CCScene*"
+            },
+            {
+                "name": "m_bSendCleanupToScene",
+                "type": "bool"
+            },
+            {
+                "name": "m_pobScenesStack",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pLastUpdate",
+                "type": "struct cc_timeval*"
+            },
+            {
+                "name": "m_bNextDeltaTimeZero",
+                "type": "bool"
+            },
+            {
+                "name": "m_eProjection",
+                "type": "ccDirectorProjection"
+            },
+            {
+                "name": "m_obWinSizeInPoints",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_fContentScaleFactor",
+                "type": "float"
+            },
+            {
+                "name": "m_pszFPS",
+                "type": "char*"
+            },
+            {
+                "name": "m_pNotificationNode",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_pProjectionDelegate",
+                "type": "CCDirectorDelegate*"
+            },
+            {
+                "name": "m_pAppDelegate",
+                "type": "CCSceneDelegate*"
+            },
+            {
+                "name": "m_obScaleFactor",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_obResolutionInPixels",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_eTextureQuality",
+                "type": "TextureQuality"
+            },
+            {
+                "name": "m_bDontCallWillSwitch",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCDisplayLinkDirector": {
+        "name": "CCDisplayLinkDirector",
+        "subclasses": [
+            "CCDirector"
+        ],
+        "members": [
+            {
+                "name": "m_bInvalid",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCGridBase": {
+        "name": "CCGridBase",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_bActive",
+                "type": "bool"
+            },
+            {
+                "name": "m_nReuseGrid",
+                "type": "int"
+            },
+            {
+                "name": "m_sGridSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_pTexture",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_obStep",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_pGrabber",
+                "type": "CCGrabber*"
+            },
+            {
+                "name": "m_bIsTextureFlipped",
+                "type": "bool"
+            },
+            {
+                "name": "m_pShaderProgram",
+                "type": "CCGLProgram*"
+            },
+            {
+                "name": "m_directorProjection",
+                "type": "ccDirectorProjection"
+            }
+        ]
+    },
+    "CCGrid3D": {
+        "name": "CCGrid3D",
+        "subclasses": [
+            "CCGridBase"
+        ],
+        "members": [
+            {
+                "name": "m_pTexCoordinates",
+                "type": "GLvoid*"
+            },
+            {
+                "name": "m_pVertices",
+                "type": "GLvoid*"
+            },
+            {
+                "name": "m_pOriginalVertices",
+                "type": "GLvoid*"
+            },
+            {
+                "name": "m_pIndices",
+                "type": "GLushort*"
+            }
+        ]
+    },
+    "CCTiledGrid3D": {
+        "name": "CCTiledGrid3D",
+        "subclasses": [
+            "CCGridBase"
+        ],
+        "members": [
+            {
+                "name": "m_pTexCoordinates",
+                "type": "GLvoid*"
+            },
+            {
+                "name": "m_pVertices",
+                "type": "GLvoid*"
+            },
+            {
+                "name": "m_pOriginalVertices",
+                "type": "GLvoid*"
+            },
+            {
+                "name": "m_pIndices",
+                "type": "GLushort*"
+            }
+        ]
+    },
+    "kmVec2": {
+        "name": "kmVec2",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "float"
+            },
+            {
+                "name": "y",
+                "type": "float"
+            }
+        ]
+    },
+    "kmVec3": {
+        "name": "kmVec3",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "float"
+            },
+            {
+                "name": "y",
+                "type": "float"
+            },
+            {
+                "name": "z",
+                "type": "float"
+            }
+        ]
+    },
+    "kmMat3": {
+        "name": "kmMat3",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "mat",
+                "type": "float[9]"
+            }
+        ]
+    },
+    "kmMat4": {
+        "name": "kmMat4",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "mat",
+                "type": "float[16]"
+            }
+        ]
+    },
+    "kmQuaternion": {
+        "name": "kmQuaternion",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "float"
+            },
+            {
+                "name": "y",
+                "type": "float"
+            },
+            {
+                "name": "z",
+                "type": "float"
+            },
+            {
+                "name": "w",
+                "type": "float"
+            }
+        ]
+    },
+    "kmPlane": {
+        "name": "kmPlane",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "a",
+                "type": "float"
+            },
+            {
+                "name": "b",
+                "type": "float"
+            },
+            {
+                "name": "c",
+                "type": "float"
+            },
+            {
+                "name": "d",
+                "type": "float"
+            }
+        ]
+    },
+    "kmAABB": {
+        "name": "kmAABB",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "min",
+                "type": "kmVec3"
+            },
+            {
+                "name": "max",
+                "type": "kmVec3"
+            }
+        ]
+    },
+    "kmRay2": {
+        "name": "kmRay2",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "start",
+                "type": "kmVec2"
+            },
+            {
+                "name": "dir",
+                "type": "kmVec2"
+            }
+        ]
+    },
+    "CCKeypadDelegate": {
+        "name": "CCKeypadDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCKeypadHandler": {
+        "name": "CCKeypadHandler",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegate",
+                "type": "CCKeypadDelegate*"
+            }
+        ]
+    },
+    "CCKeypadDispatcher": {
+        "name": "CCKeypadDispatcher",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegates",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_bLocked",
+                "type": "bool"
+            },
+            {
+                "name": "m_bToAdd",
+                "type": "bool"
+            },
+            {
+                "name": "m_bToRemove",
+                "type": "bool"
+            },
+            {
+                "name": "m_pHandlersToAdd",
+                "type": "struct _ccCArray*"
+            },
+            {
+                "name": "m_pHandlersToRemove",
+                "type": "struct _ccCArray*"
+            }
+        ]
+    },
+    "CCTextureAtlas": {
+        "name": "CCTextureAtlas",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pIndices",
+                "type": "GLushort*"
+            },
+            {
+                "name": "m_pBuffersVBO",
+                "type": "GLuint[2]"
+            },
+            {
+                "name": "m_bDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_uTotalQuads",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uCapacity",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pTexture",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_pQuads",
+                "type": "ccV3F_C4B_T2F_Quad*"
+            }
+        ]
+    },
+    "CCSprite": {
+        "name": "CCSprite",
+        "subclasses": [
+            "CCNodeRGBA",
+            "CCTextureProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_pobTextureAtlas",
+                "type": "CCTextureAtlas*"
+            },
+            {
+                "name": "m_uAtlasIndex",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pobBatchNode",
+                "type": "CCSpriteBatchNode*"
+            },
+            {
+                "name": "m_bDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_bRecursiveDirty",
+                "type": "bool"
+            },
+            {
+                "name": "m_bHasChildren",
+                "type": "bool"
+            },
+            {
+                "name": "m_bShouldBeHidden",
+                "type": "bool"
+            },
+            {
+                "name": "m_transformToBatch",
+                "type": "CCAffineTransform"
+            },
+            {
+                "name": "m_sBlendFunc",
+                "type": "ccBlendFunc"
+            },
+            {
+                "name": "m_pobTexture",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_obRect",
+                "type": "CCRect"
+            },
+            {
+                "name": "m_bRectRotated",
+                "type": "bool"
+            },
+            {
+                "name": "m_obOffsetPosition",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_obUnflippedOffsetPositionFromCenter",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_sQuad",
+                "type": "ccV3F_C4B_T2F_Quad"
+            },
+            {
+                "name": "m_bOpacityModifyRGB",
+                "type": "bool"
+            },
+            {
+                "name": "m_bFlipX",
+                "type": "bool"
+            },
+            {
+                "name": "m_bFlipY",
+                "type": "bool"
+            },
+            {
+                "name": "m_bDontDraw",
+                "type": "bool"
+            },
+            {
+                "name": "m_fTlVertexMod",
+                "type": "float"
+            },
+            {
+                "name": "m_fTrVertexMod",
+                "type": "float"
+            },
+            {
+                "name": "m_fBlVertexMod",
+                "type": "float"
+            },
+            {
+                "name": "m_fBrVertexMod",
+                "type": "float"
+            },
+            {
+                "name": "pad561",
+                "type": "char[16]"
+            },
+            {
+                "name": "m_bUnknown",
+                "type": "bool"
+            },
+            {
+                "name": "m_nUnknown",
+                "type": "int"
+            }
+        ]
+    },
+    "CCLabelTTF": {
+        "name": "CCLabelTTF",
+        "subclasses": [
+            "CCSprite",
+            "CCLabelProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_tDimensions",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_hAlignment",
+                "type": "CCTextAlignment"
+            },
+            {
+                "name": "m_vAlignment",
+                "type": "CCVerticalTextAlignment"
+            },
+            {
+                "name": "m_pFontName",
+                "type": "std::string*"
+            },
+            {
+                "name": "m_fFontSize",
+                "type": "float"
+            },
+            {
+                "name": "m_string",
+                "type": "std::string"
+            },
+            {
+                "name": "m_shadowEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_shadowOffset",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_shadowOpacity",
+                "type": "float"
+            },
+            {
+                "name": "m_shadowBlur",
+                "type": "float"
+            },
+            {
+                "name": "m_strokeEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_strokeColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_strokeSize",
+                "type": "float"
+            },
+            {
+                "name": "m_textFillColor",
+                "type": "ccColor3B"
+            }
+        ]
+    },
+    "CCSpriteBatchNode": {
+        "name": "CCSpriteBatchNode",
+        "subclasses": [
+            "CCNode",
+            "CCTextureProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_pobTextureAtlas",
+                "type": "CCTextureAtlas*"
+            },
+            {
+                "name": "m_blendFunc",
+                "type": "ccBlendFunc"
+            },
+            {
+                "name": "m_pobDescendants",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_bManualSortChildren",
+                "type": "bool"
+            },
+            {
+                "name": "m_bManualSortAllChildrenDirty",
+                "type": "bool"
+            }
+        ]
+    },
+    "_BMFontDef": {
+        "name": "_BMFontDef",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "charID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "rect",
+                "type": "CCRect"
+            },
+            {
+                "name": "xOffset",
+                "type": "short"
+            },
+            {
+                "name": "yOffset",
+                "type": "short"
+            },
+            {
+                "name": "xAdvance",
+                "type": "short"
+            }
+        ]
+    },
+    "_BMFontPadding": {
+        "name": "_BMFontPadding",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "left",
+                "type": "int"
+            },
+            {
+                "name": "top",
+                "type": "int"
+            },
+            {
+                "name": "right",
+                "type": "int"
+            },
+            {
+                "name": "bottom",
+                "type": "int"
+            }
+        ]
+    },
+    "_FontDefHashElement": {
+        "name": "_FontDefHashElement",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "key",
+                "type": "unsigned int"
+            },
+            {
+                "name": "fontDef",
+                "type": "ccBMFontDef"
+            },
+            {
+                "name": "hh",
+                "type": "UT_hash_handle"
+            }
+        ]
+    },
+    "_KerningHashElement": {
+        "name": "_KerningHashElement",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "key",
+                "type": "int"
+            },
+            {
+                "name": "amount",
+                "type": "int"
+            },
+            {
+                "name": "hh",
+                "type": "UT_hash_handle"
+            }
+        ]
+    },
+    "CCBMFontConfiguration": {
+        "name": "CCBMFontConfiguration",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pFontDefDictionary",
+                "type": "tCCFontDefHashElement*"
+            },
+            {
+                "name": "m_nCommonHeight",
+                "type": "int"
+            },
+            {
+                "name": "m_tPadding",
+                "type": "ccBMFontPadding"
+            },
+            {
+                "name": "m_sAtlasName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_pKerningDictionary",
+                "type": "tCCKerningHashElement*"
+            },
+            {
+                "name": "m_pCharacterSet",
+                "type": "std::set<unsigned int>*"
+            }
+        ]
+    },
+    "CCLabelBMFont": {
+        "name": "CCLabelBMFont",
+        "subclasses": [
+            "CCSpriteBatchNode",
+            "CCLabelProtocol",
+            "CCRGBAProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_sString",
+                "type": "unsigned short*"
+            },
+            {
+                "name": "m_sFntFile",
+                "type": "std::string"
+            },
+            {
+                "name": "m_sInitialString",
+                "type": "unsigned short*"
+            },
+            {
+                "name": "m_sInitialStringUTF8",
+                "type": "std::string"
+            },
+            {
+                "name": "m_pAlignment",
+                "type": "CCTextAlignment"
+            },
+            {
+                "name": "m_fWidth",
+                "type": "float"
+            },
+            {
+                "name": "m_pConfiguration",
+                "type": "CCBMFontConfiguration*"
+            },
+            {
+                "name": "m_bLineBreakWithoutSpaces",
+                "type": "bool"
+            },
+            {
+                "name": "m_tImageOffset",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_pReusedChar",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "m_cDisplayedOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "m_cRealOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "m_tDisplayedColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_tRealColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_bCascadeColorEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_bCascadeOpacityEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_bIsOpacityModifyRGB",
+                "type": "bool"
+            },
+            {
+                "name": "m_bIsBatched",
+                "type": "bool"
+            },
+            {
+                "name": "m_pTargetArray",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pSomeTexture",
+                "type": "CCTexture2D*"
+            }
+        ]
+    },
+    "CCTouchDelegate": {
+        "name": "CCTouchDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCTargetedTouchDelegate": {
+        "name": "CCTargetedTouchDelegate",
+        "subclasses": [
+            "CCTouchDelegate"
+        ],
+        "members": []
+    },
+    "CCStandardTouchDelegate": {
+        "name": "CCStandardTouchDelegate",
+        "subclasses": [
+            "CCTouchDelegate"
+        ],
+        "members": []
+    },
+    "CCAcceleration": {
+        "name": "CCAcceleration",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "x",
+                "type": "double"
+            },
+            {
+                "name": "y",
+                "type": "double"
+            },
+            {
+                "name": "z",
+                "type": "double"
+            },
+            {
+                "name": "timestamp",
+                "type": "double"
+            }
+        ]
+    },
+    "CCAccelerometerDelegate": {
+        "name": "CCAccelerometerDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCKeyboardDelegate": {
+        "name": "CCKeyboardDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCKeyboardHandler": {
+        "name": "CCKeyboardHandler",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegate",
+                "type": "CCKeyboardDelegate*"
+            }
+        ]
+    },
+    "CCMouseDelegate": {
+        "name": "CCMouseDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCMouseHandler": {
+        "name": "CCMouseHandler",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegate",
+                "type": "CCMouseDelegate*"
+            }
+        ]
+    },
+    "CCLayer": {
+        "name": "CCLayer",
+        "subclasses": [
+            "CCNode",
+            "CCTouchDelegate",
+            "CCAccelerometerDelegate",
+            "CCKeypadDelegate",
+            "CCKeyboardDelegate",
+            "CCMouseDelegate"
+        ],
+        "members": [
+            {
+                "name": "m_bTouchEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_bAccelerometerEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_bKeypadEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_bKeyboardEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_bMouseEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_pScriptTouchHandlerEntry",
+                "type": "CCTouchScriptHandlerEntry*"
+            },
+            {
+                "name": "m_pScriptKeypadHandlerEntry",
+                "type": "CCScriptHandlerEntry*"
+            },
+            {
+                "name": "m_pScriptAccelerateHandlerEntry",
+                "type": "CCScriptHandlerEntry*"
+            },
+            {
+                "name": "m_nTouchPriority",
+                "type": "int"
+            },
+            {
+                "name": "m_eTouchMode",
+                "type": "ccTouchesMode"
+            }
+        ]
+    },
+    "CCLayerRGBA": {
+        "name": "CCLayerRGBA",
+        "subclasses": [
+            "CCLayer",
+            "CCRGBAProtocol"
+        ],
+        "members": [
+            {
+                "name": "_displayedOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "_realOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "_displayedColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "_realColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "_cascadeOpacityEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "_cascadeColorEnabled",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCLayerColor": {
+        "name": "CCLayerColor",
+        "subclasses": [
+            "CCLayerRGBA",
+            "CCBlendProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_pSquareVertices",
+                "type": "ccVertex2F[4]"
+            },
+            {
+                "name": "m_pSquareColors",
+                "type": "ccColor4F[4]"
+            },
+            {
+                "name": "m_tBlendFunc",
+                "type": "ccBlendFunc"
+            }
+        ]
+    },
+    "CCLayerGradient": {
+        "name": "CCLayerGradient",
+        "subclasses": [
+            "CCLayerColor"
+        ],
+        "members": [
+            {
+                "name": "m_startColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_endColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_cStartOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "m_cEndOpacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "m_AlongVector",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_bCompressedInterpolation",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCLayerMultiplex": {
+        "name": "CCLayerMultiplex",
+        "subclasses": [
+            "CCLayer"
+        ],
+        "members": [
+            {
+                "name": "m_nEnabledLayer",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pLayers",
+                "type": "CCArray*"
+            }
+        ]
+    },
+    "CCScene": {
+        "name": "CCScene",
+        "subclasses": [
+            "CCNode"
+        ],
+        "members": [
+            {
+                "name": "m_pIDK",
+                "type": "void*"
+            }
+        ]
+    },
+    "CCTransitionEaseScene": {
+        "name": "CCTransitionEaseScene",
+        "subclasses": [],
+        "members": []
+    },
+    "CCTransitionScene": {
+        "name": "CCTransitionScene",
+        "subclasses": [
+            "CCScene"
+        ],
+        "members": [
+            {
+                "name": "m_pInScene",
+                "type": "CCScene*"
+            },
+            {
+                "name": "m_pOutScene",
+                "type": "CCScene*"
+            },
+            {
+                "name": "m_fDuration",
+                "type": "float"
+            },
+            {
+                "name": "m_bIsInSceneOnTop",
+                "type": "bool"
+            },
+            {
+                "name": "m_bIsSendCleanupToScene",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCTransitionSceneOriented": {
+        "name": "CCTransitionSceneOriented",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": [
+            {
+                "name": "m_eOrientation",
+                "type": "tOrientation"
+            }
+        ]
+    },
+    "CCTransitionRotoZoom": {
+        "name": "CCTransitionRotoZoom",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": []
+    },
+    "CCTransitionJumpZoom": {
+        "name": "CCTransitionJumpZoom",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": []
+    },
+    "CCTransitionMoveInL": {
+        "name": "CCTransitionMoveInL",
+        "subclasses": [
+            "CCTransitionScene",
+            "CCTransitionEaseScene"
+        ],
+        "members": []
+    },
+    "CCTransitionMoveInR": {
+        "name": "CCTransitionMoveInR",
+        "subclasses": [
+            "CCTransitionMoveInL"
+        ],
+        "members": []
+    },
+    "CCTransitionMoveInT": {
+        "name": "CCTransitionMoveInT",
+        "subclasses": [
+            "CCTransitionMoveInL"
+        ],
+        "members": []
+    },
+    "CCTransitionMoveInB": {
+        "name": "CCTransitionMoveInB",
+        "subclasses": [
+            "CCTransitionMoveInL"
+        ],
+        "members": []
+    },
+    "CCTransitionSlideInL": {
+        "name": "CCTransitionSlideInL",
+        "subclasses": [
+            "CCTransitionScene",
+            "CCTransitionEaseScene"
+        ],
+        "members": []
+    },
+    "CCTransitionSlideInR": {
+        "name": "CCTransitionSlideInR",
+        "subclasses": [
+            "CCTransitionSlideInL"
+        ],
+        "members": []
+    },
+    "CCTransitionSlideInB": {
+        "name": "CCTransitionSlideInB",
+        "subclasses": [
+            "CCTransitionSlideInL"
+        ],
+        "members": []
+    },
+    "CCTransitionSlideInT": {
+        "name": "CCTransitionSlideInT",
+        "subclasses": [
+            "CCTransitionSlideInL"
+        ],
+        "members": []
+    },
+    "CCTransitionShrinkGrow": {
+        "name": "CCTransitionShrinkGrow",
+        "subclasses": [
+            "CCTransitionScene",
+            "CCTransitionEaseScene"
+        ],
+        "members": []
+    },
+    "CCTransitionFlipX": {
+        "name": "CCTransitionFlipX",
+        "subclasses": [
+            "CCTransitionSceneOriented"
+        ],
+        "members": []
+    },
+    "CCTransitionFlipY": {
+        "name": "CCTransitionFlipY",
+        "subclasses": [
+            "CCTransitionSceneOriented"
+        ],
+        "members": []
+    },
+    "CCTransitionFlipAngular": {
+        "name": "CCTransitionFlipAngular",
+        "subclasses": [
+            "CCTransitionSceneOriented"
+        ],
+        "members": []
+    },
+    "CCTransitionZoomFlipX": {
+        "name": "CCTransitionZoomFlipX",
+        "subclasses": [
+            "CCTransitionSceneOriented"
+        ],
+        "members": []
+    },
+    "CCTransitionZoomFlipY": {
+        "name": "CCTransitionZoomFlipY",
+        "subclasses": [
+            "CCTransitionSceneOriented"
+        ],
+        "members": []
+    },
+    "CCTransitionZoomFlipAngular": {
+        "name": "CCTransitionZoomFlipAngular",
+        "subclasses": [
+            "CCTransitionSceneOriented"
+        ],
+        "members": []
+    },
+    "CCTransitionFade": {
+        "name": "CCTransitionFade",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": [
+            {
+                "name": "m_tColor",
+                "type": "ccColor4B"
+            }
+        ]
+    },
+    "CCTransitionCrossFade": {
+        "name": "CCTransitionCrossFade",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": []
+    },
+    "CCTransitionTurnOffTiles": {
+        "name": "CCTransitionTurnOffTiles",
+        "subclasses": [
+            "CCTransitionScene",
+            "CCTransitionEaseScene"
+        ],
+        "members": []
+    },
+    "CCTransitionSplitCols": {
+        "name": "CCTransitionSplitCols",
+        "subclasses": [
+            "CCTransitionScene",
+            "CCTransitionEaseScene"
+        ],
+        "members": []
+    },
+    "CCTransitionSplitRows": {
+        "name": "CCTransitionSplitRows",
+        "subclasses": [
+            "CCTransitionSplitCols"
+        ],
+        "members": []
+    },
+    "CCTransitionFadeTR": {
+        "name": "CCTransitionFadeTR",
+        "subclasses": [
+            "CCTransitionScene",
+            "CCTransitionEaseScene"
+        ],
+        "members": []
+    },
+    "CCTransitionFadeBL": {
+        "name": "CCTransitionFadeBL",
+        "subclasses": [
+            "CCTransitionFadeTR"
+        ],
+        "members": []
+    },
+    "CCTransitionFadeUp": {
+        "name": "CCTransitionFadeUp",
+        "subclasses": [
+            "CCTransitionFadeTR"
+        ],
+        "members": []
+    },
+    "CCTransitionFadeDown": {
+        "name": "CCTransitionFadeDown",
+        "subclasses": [
+            "CCTransitionFadeTR"
+        ],
+        "members": []
+    },
+    "CCTransitionPageTurn": {
+        "name": "CCTransitionPageTurn",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": [
+            {
+                "name": "m_bBack",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCTransitionProgress": {
+        "name": "CCTransitionProgress",
+        "subclasses": [
+            "CCTransitionScene"
+        ],
+        "members": [
+            {
+                "name": "m_fTo",
+                "type": "float"
+            },
+            {
+                "name": "m_fFrom",
+                "type": "float"
+            },
+            {
+                "name": "m_pSceneToBeModified",
+                "type": "CCScene*"
+            }
+        ]
+    },
+    "CCTransitionProgressRadialCCW": {
+        "name": "CCTransitionProgressRadialCCW",
+        "subclasses": [
+            "CCTransitionProgress"
+        ],
+        "members": []
+    },
+    "CCTransitionProgressRadialCW": {
+        "name": "CCTransitionProgressRadialCW",
+        "subclasses": [
+            "CCTransitionProgress"
+        ],
+        "members": []
+    },
+    "CCTransitionProgressHorizontal": {
+        "name": "CCTransitionProgressHorizontal",
+        "subclasses": [
+            "CCTransitionProgress"
+        ],
+        "members": []
+    },
+    "CCTransitionProgressVertical": {
+        "name": "CCTransitionProgressVertical",
+        "subclasses": [
+            "CCTransitionProgress"
+        ],
+        "members": []
+    },
+    "CCTransitionProgressInOut": {
+        "name": "CCTransitionProgressInOut",
+        "subclasses": [
+            "CCTransitionProgress"
+        ],
+        "members": []
+    },
+    "CCTransitionProgressOutIn": {
+        "name": "CCTransitionProgressOutIn",
+        "subclasses": [
+            "CCTransitionProgress"
+        ],
+        "members": []
+    },
+    "CCMenuItem": {
+        "name": "CCMenuItem",
+        "subclasses": [
+            "CCNodeRGBA"
+        ],
+        "members": [
+            {
+                "name": "m_bSelected",
+                "type": "bool"
+            },
+            {
+                "name": "m_bEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_pListener",
+                "type": "CCObject*"
+            },
+            {
+                "name": "m_pfnSelector",
+                "type": "SEL_MenuHandler"
+            },
+            {
+                "name": "m_nScriptTapHandler",
+                "type": "int"
+            }
+        ]
+    },
+    "CCMenuItemLabel": {
+        "name": "CCMenuItemLabel",
+        "subclasses": [
+            "CCMenuItem"
+        ],
+        "members": [
+            {
+                "name": "m_tDisabledColor",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_pLabel",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_tColorBackup",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_fOriginalScale",
+                "type": "float"
+            }
+        ]
+    },
+    "CCMenuItemAtlasFont": {
+        "name": "CCMenuItemAtlasFont",
+        "subclasses": [
+            "CCMenuItemLabel"
+        ],
+        "members": []
+    },
+    "CCMenuItemFont": {
+        "name": "CCMenuItemFont",
+        "subclasses": [
+            "CCMenuItemLabel"
+        ],
+        "members": [
+            {
+                "name": "m_uFontSize",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_strFontName",
+                "type": "std::string"
+            }
+        ]
+    },
+    "CCMenuItemSprite": {
+        "name": "CCMenuItemSprite",
+        "subclasses": [
+            "CCMenuItem"
+        ],
+        "members": [
+            {
+                "name": "m_pNormalImage",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_pSelectedImage",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_pDisabledImage",
+                "type": "CCNode*"
+            }
+        ]
+    },
+    "CCMenuItemImage": {
+        "name": "CCMenuItemImage",
+        "subclasses": [
+            "CCMenuItemSprite"
+        ],
+        "members": []
+    },
+    "CCMenuItemToggle": {
+        "name": "CCMenuItemToggle",
+        "subclasses": [
+            "CCMenuItem"
+        ],
+        "members": [
+            {
+                "name": "m_uSelectedIndex",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pSubItems",
+                "type": "CCArray*"
+            }
+        ]
+    },
+    "CCMenu": {
+        "name": "CCMenu",
+        "subclasses": [
+            "CCLayerRGBA"
+        ],
+        "members": [
+            {
+                "name": "m_bEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_eState",
+                "type": "tCCMenuState"
+            },
+            {
+                "name": "m_pSelectedItem",
+                "type": "CCMenuItem*"
+            }
+        ]
+    },
+    "CCClippingNode": {
+        "name": "CCClippingNode",
+        "subclasses": [
+            "CCNode"
+        ],
+        "members": [
+            {
+                "name": "m_pStencil",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_fAlphaThreshold",
+                "type": "GLfloat"
+            },
+            {
+                "name": "m_bInverted",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCMotionStreak": {
+        "name": "CCMotionStreak",
+        "subclasses": [
+            "CCNodeRGBA",
+            "CCTextureProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_bFastMode",
+                "type": "bool"
+            },
+            {
+                "name": "m_bStartingPositionInitialized",
+                "type": "bool"
+            },
+            {
+                "name": "m_pTexture",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_tBlendFunc",
+                "type": "ccBlendFunc"
+            },
+            {
+                "name": "m_tPositionR",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_fStroke",
+                "type": "float"
+            },
+            {
+                "name": "m_fFadeDelta",
+                "type": "float"
+            },
+            {
+                "name": "m_fMinSeg",
+                "type": "float"
+            },
+            {
+                "name": "m_uMaxPoints",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uNuPoints",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uPreviousNuPoints",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pPointVertexes",
+                "type": "CCPoint*"
+            },
+            {
+                "name": "m_pPointState",
+                "type": "float*"
+            },
+            {
+                "name": "m_pVertices",
+                "type": "ccVertex2F*"
+            },
+            {
+                "name": "m_pColorPointer",
+                "type": "GLubyte*"
+            },
+            {
+                "name": "m_pTexCoords",
+                "type": "ccTex2F*"
+            }
+        ]
+    },
+    "CCProgressTimer": {
+        "name": "CCProgressTimer",
+        "subclasses": [
+            "CCNodeRGBA"
+        ],
+        "members": [
+            {
+                "name": "m_eType",
+                "type": "CCProgressTimerType"
+            },
+            {
+                "name": "m_fPercentage",
+                "type": "float"
+            },
+            {
+                "name": "m_pSprite",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "m_nVertexDataCount",
+                "type": "int"
+            },
+            {
+                "name": "m_pVertexData",
+                "type": "ccV2F_C4B_T2F*"
+            },
+            {
+                "name": "m_tMidpoint",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_tBarChangeRate",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_bReverseDirection",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCRenderTexture": {
+        "name": "CCRenderTexture",
+        "subclasses": [
+            "CCNode"
+        ],
+        "members": [
+            {
+                "name": "m_pSprite",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "m_uFBO",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_uDepthRenderBufffer",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_nOldFBO",
+                "type": "GLint"
+            },
+            {
+                "name": "m_pTexture",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_pTextureCopy",
+                "type": "CCTexture2D*"
+            },
+            {
+                "name": "m_pUITextureImage",
+                "type": "CCImage*"
+            },
+            {
+                "name": "m_ePixelFormat",
+                "type": "GLenum"
+            },
+            {
+                "name": "m_uClearFlags",
+                "type": "GLbitfield"
+            },
+            {
+                "name": "m_sClearColor",
+                "type": "ccColor4F"
+            },
+            {
+                "name": "m_fClearDepth",
+                "type": "GLclampf"
+            },
+            {
+                "name": "m_nClearStencil",
+                "type": "GLint"
+            },
+            {
+                "name": "m_bAutoDraw",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCDevice": {
+        "name": "CCDevice",
+        "subclasses": [],
+        "members": []
+    },
+    "CCFileUtils": {
+        "name": "CCFileUtils",
+        "subclasses": [
+            "TypeInfo"
+        ],
+        "members": [
+            {
+                "name": "m_pFilenameLookupDict",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_searchResolutionsOrderArray",
+                "type": "std::vector<std::string>"
+            },
+            {
+                "name": "m_searchPathArray",
+                "type": "std::vector<std::string>"
+            },
+            {
+                "name": "m_strDefaultResRootPath",
+                "type": "std::string"
+            },
+            {
+                "name": "m_fullPathCache",
+                "type": "std::map<std::string, std::string>"
+            },
+            {
+                "name": "s_sharedFileUtils",
+                "type": "CCFileUtils*"
+            }
+        ]
+    },
+    "CCImage": {
+        "name": "CCImage",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_nWidth",
+                "type": "unsigned short"
+            },
+            {
+                "name": "m_nHeight",
+                "type": "unsigned short"
+            },
+            {
+                "name": "m_nBitsPerComponent",
+                "type": "int"
+            },
+            {
+                "name": "m_pData",
+                "type": "unsigned char*"
+            },
+            {
+                "name": "m_bHasAlpha",
+                "type": "bool"
+            },
+            {
+                "name": "m_bPreMulti",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCThread": {
+        "name": "CCThread",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pAutoreasePool",
+                "type": "void*"
+            }
+        ]
+    },
+    "cc_timeval": {
+        "name": "cc_timeval",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "tv_sec",
+                "type": "long"
+            },
+            {
+                "name": "tv_usec",
+                "type": "int"
+            }
+        ]
+    },
+    "CCTime": {
+        "name": "CCTime",
+        "subclasses": [],
+        "members": []
+    },
+    "CCAccelerometer": {
+        "name": "CCAccelerometer",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_obAccelerationValue",
+                "type": "CCAcceleration"
+            },
+            {
+                "name": "m_pAccelDelegate",
+                "type": "CCAccelerometerDelegate*"
+            }
+        ]
+    },
+    "timezone": {
+        "name": "timezone",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "tz_minuteswest",
+                "type": "int"
+            },
+            {
+                "name": "tz_dsttime",
+                "type": "int"
+            }
+        ]
+    },
+    "CCApplicationProtocol": {
+        "name": "CCApplicationProtocol",
+        "subclasses": [],
+        "members": []
+    },
+    "CCApplication": {
+        "name": "CCApplication",
+        "subclasses": [
+            "CCApplicationProtocol"
+        ],
+        "members": [
+            {
+                "name": "m_hInstance",
+                "type": "HINSTANCE"
+            },
+            {
+                "name": "m_hAccelTable",
+                "type": "HACCEL"
+            },
+            {
+                "name": "m_nAnimationInterval",
+                "type": "LARGE_INTEGER"
+            },
+            {
+                "name": "m_resourceRootPath",
+                "type": "std::string"
+            },
+            {
+                "name": "m_startupScriptFilename",
+                "type": "std::string"
+            },
+            {
+                "name": "sm_pSharedApplication",
+                "type": "CCApplication*"
+            }
+        ]
+    },
+    "CCEGLViewProtocol": {
+        "name": "CCEGLViewProtocol",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pDelegate",
+                "type": "EGLTouchDelegate*"
+            },
+            {
+                "name": "m_obScreenSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_obDesignResolutionSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_obViewPortRect",
+                "type": "CCRect"
+            },
+            {
+                "name": "m_szViewName",
+                "type": "char[50]"
+            },
+            {
+                "name": "m_fScaleX",
+                "type": "float"
+            },
+            {
+                "name": "m_fScaleY",
+                "type": "float"
+            },
+            {
+                "name": "m_eResolutionPolicy",
+                "type": "ResolutionPolicy"
+            }
+        ]
+    },
+    "GLFWvidmode": {
+        "name": "GLFWvidmode",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "width",
+                "type": "int"
+            },
+            {
+                "name": "height",
+                "type": "int"
+            },
+            {
+                "name": "redBits",
+                "type": "int"
+            },
+            {
+                "name": "greenBits",
+                "type": "int"
+            },
+            {
+                "name": "blueBits",
+                "type": "int"
+            },
+            {
+                "name": "refreshRate",
+                "type": "int"
+            }
+        ]
+    },
+    "GLFWgammaramp": {
+        "name": "GLFWgammaramp",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "red",
+                "type": "unsigned short*"
+            },
+            {
+                "name": "green",
+                "type": "unsigned short*"
+            },
+            {
+                "name": "blue",
+                "type": "unsigned short*"
+            },
+            {
+                "name": "size",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "CCEGLView": {
+        "name": "CCEGLView",
+        "subclasses": [
+            "CCEGLViewProtocol",
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "s_pEglView",
+                "type": "CCEGLView*"
+            },
+            {
+                "name": "m_bCaptured",
+                "type": "bool"
+            },
+            {
+                "name": "m_bSupportTouch",
+                "type": "bool"
+            },
+            {
+                "name": "m_bInRetinaMonitor",
+                "type": "bool"
+            },
+            {
+                "name": "m_bRetinaEnabled",
+                "type": "bool"
+            },
+            {
+                "name": "m_nRetinaFactor",
+                "type": "int"
+            },
+            {
+                "name": "m_bCursorHidden",
+                "type": "bool"
+            },
+            {
+                "name": "m_fFrameZoomFactor",
+                "type": "float"
+            },
+            {
+                "name": "m_pMainWindow",
+                "type": "GLFWwindow*"
+            },
+            {
+                "name": "m_pPrimaryMonitor",
+                "type": "GLFWmonitor*"
+            },
+            {
+                "name": "m_obWindowedSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_fMouseX",
+                "type": "float"
+            },
+            {
+                "name": "m_fMouseY",
+                "type": "float"
+            },
+            {
+                "name": "m_bIsFullscreen",
+                "type": "bool"
+            },
+            {
+                "name": "m_bShouldHideCursor",
+                "type": "bool"
+            },
+            {
+                "name": "m_bShouldCallGLFinish",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCShaderCache": {
+        "name": "CCShaderCache",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pPrograms",
+                "type": "CCDictionary*"
+            }
+        ]
+    },
+    "CCAnimationCache": {
+        "name": "CCAnimationCache",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pAnimations",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "s_pSharedAnimationCache",
+                "type": "CCAnimationCache*"
+            }
+        ]
+    },
+    "CCSpriteFrameCache": {
+        "name": "CCSpriteFrameCache",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pSpriteFrames",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_pSpriteFramesAliases",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_pLoadedFileNames",
+                "type": "std::set<std::string>*"
+            }
+        ]
+    },
+    "CCNotificationCenter": {
+        "name": "CCNotificationCenter",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_observers",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_scriptHandler",
+                "type": "int"
+            }
+        ]
+    },
+    "CCNotificationObserver": {
+        "name": "CCNotificationObserver",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_target",
+                "type": "CCObject*"
+            },
+            {
+                "name": "m_selector",
+                "type": "SEL_CallFuncO"
+            },
+            {
+                "name": "m_name",
+                "type": "char*"
+            },
+            {
+                "name": "m_object",
+                "type": "CCObject*"
+            },
+            {
+                "name": "m_nHandler",
+                "type": "int"
+            }
+        ]
+    },
+    "CCProfiler": {
+        "name": "CCProfiler",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pActiveTimers",
+                "type": "CCDictionary*"
+            }
+        ]
+    },
+    "CCProfilingTimer": {
+        "name": "CCProfilingTimer",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_NameStr",
+                "type": "std::string"
+            },
+            {
+                "name": "numberOfCalls",
+                "type": "int"
+            },
+            {
+                "name": "m_dAverageTime1",
+                "type": "int"
+            },
+            {
+                "name": "m_dAverageTime2",
+                "type": "int"
+            },
+            {
+                "name": "totalTime",
+                "type": "long long"
+            },
+            {
+                "name": "minTime",
+                "type": "int"
+            },
+            {
+                "name": "maxTime",
+                "type": "int"
+            },
+            {
+                "name": "m_sStartTime",
+                "type": "struct cc_timeval"
+            }
+        ]
+    },
+    "CCUserDefault": {
+        "name": "CCUserDefault",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_spUserDefault",
+                "type": "CCUserDefault*"
+            },
+            {
+                "name": "m_sFilePath",
+                "type": "std::string"
+            },
+            {
+                "name": "m_sbIsFilePathInitialized",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCIMEDelegate": {
+        "name": "CCIMEDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCIMEDispatcher": {
+        "name": "CCIMEDispatcher",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pImpl",
+                "type": "Impl*"
+            }
+        ]
+    },
+    "CCTextFieldDelegate": {
+        "name": "CCTextFieldDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCTextFieldTTF": {
+        "name": "CCTextFieldTTF",
+        "subclasses": [
+            "CCLabelTTF",
+            "CCIMEDelegate"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegate",
+                "type": "CCTextFieldDelegate*"
+            },
+            {
+                "name": "m_nCharCount",
+                "type": "int"
+            },
+            {
+                "name": "m_pInputText",
+                "type": "std::string*"
+            },
+            {
+                "name": "m_pPlaceHolder",
+                "type": "std::string*"
+            },
+            {
+                "name": "m_ColorSpaceHolder",
+                "type": "ccColor3B"
+            },
+            {
+                "name": "m_bSecureTextEntry",
+                "type": "bool"
+            },
+            {
+                "name": "m_pLens",
+                "type": "LengthStack*"
+            }
+        ]
+    },
+    "CCTextureCache": {
+        "name": "CCTextureCache",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pTextures",
+                "type": "CCDictionary*"
+            }
+        ]
+    },
+    "CCPVRMipmap": {
+        "name": "CCPVRMipmap",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "address",
+                "type": "unsigned char*"
+            },
+            {
+                "name": "len",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "_ccPVRTexturePixelFormatInfo": {
+        "name": "_ccPVRTexturePixelFormatInfo",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "internalFormat",
+                "type": "GLenum"
+            },
+            {
+                "name": "format",
+                "type": "GLenum"
+            },
+            {
+                "name": "type",
+                "type": "GLenum"
+            },
+            {
+                "name": "bpp",
+                "type": "uint32_t"
+            },
+            {
+                "name": "compressed",
+                "type": "bool"
+            },
+            {
+                "name": "alpha",
+                "type": "bool"
+            },
+            {
+                "name": "ccPixelFormat",
+                "type": "CCTexture2DPixelFormat"
+            }
+        ]
+    },
+    "CCTexturePVR": {
+        "name": "CCTexturePVR",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_asMipmaps",
+                "type": "struct CCPVRMipmap[CC_PVRMIPMAP_MAX]"
+            },
+            {
+                "name": "m_uNumberOfMipmaps",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uWidth",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uHeight",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uName",
+                "type": "GLuint"
+            },
+            {
+                "name": "m_bHasAlpha",
+                "type": "bool"
+            },
+            {
+                "name": "m_bHasPremultipliedAlpha",
+                "type": "bool"
+            },
+            {
+                "name": "m_bForcePremultipliedAlpha",
+                "type": "bool"
+            },
+            {
+                "name": "m_bRetainName",
+                "type": "bool"
+            },
+            {
+                "name": "m_eFormat",
+                "type": "CCTexture2DPixelFormat"
+            },
+            {
+                "name": "m_pPixelFormatInfo",
+                "type": "const ccPVRTexturePixelFormatInfo*"
+            }
+        ]
+    },
+    "CCParallaxNode": {
+        "name": "CCParallaxNode",
+        "subclasses": [
+            "CCNode"
+        ],
+        "members": [
+            {
+                "name": "m_pParallaxArray",
+                "type": "struct _ccArray*"
+            },
+            {
+                "name": "m_tLastPosition",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCTMXObjectGroup": {
+        "name": "CCTMXObjectGroup",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_tPositionOffset",
+                "type": "CCPoint"
+            },
+            {
+                "name": "m_pProperties",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_pObjects",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_sGroupName",
+                "type": "std::string"
+            }
+        ]
+    },
+    "CCTMXLayerInfo": {
+        "name": "CCTMXLayerInfo",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pProperties",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_sName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_tLayerSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_pTiles",
+                "type": "unsigned int*"
+            },
+            {
+                "name": "m_bVisible",
+                "type": "bool"
+            },
+            {
+                "name": "m_cOpacity",
+                "type": "unsigned char"
+            },
+            {
+                "name": "m_bOwnTiles",
+                "type": "bool"
+            },
+            {
+                "name": "m_uMinGID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uMaxGID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_tOffset",
+                "type": "CCPoint"
+            }
+        ]
+    },
+    "CCTMXTilesetInfo": {
+        "name": "CCTMXTilesetInfo",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_sName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_uFirstGid",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_tTileSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_uSpacing",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uMargin",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_sSourceImage",
+                "type": "std::string"
+            },
+            {
+                "name": "m_tImageSize",
+                "type": "CCSize"
+            }
+        ]
+    },
+    "CCTMXMapInfo": {
+        "name": "CCTMXMapInfo",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_nOrientation",
+                "type": "int"
+            },
+            {
+                "name": "m_tMapSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_tTileSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_pLayers",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pTilesets",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pObjectGroups",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_nParentElement",
+                "type": "int"
+            },
+            {
+                "name": "m_uParentGID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nLayerAttribs",
+                "type": "int"
+            },
+            {
+                "name": "m_bStoringCharacters",
+                "type": "bool"
+            },
+            {
+                "name": "m_pProperties",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_sTMXFileName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_sResources",
+                "type": "std::string"
+            },
+            {
+                "name": "m_sCurrentString",
+                "type": "std::string"
+            },
+            {
+                "name": "m_pTileProperties",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_uCurrentFirstGID",
+                "type": "unsigned int"
+            }
+        ]
+    },
+    "CCTMXLayer": {
+        "name": "CCTMXLayer",
+        "subclasses": [
+            "CCSpriteBatchNode"
+        ],
+        "members": [
+            {
+                "name": "m_tLayerSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_tMapTileSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_pTiles",
+                "type": "unsigned int*"
+            },
+            {
+                "name": "m_pTileSet",
+                "type": "CCTMXTilesetInfo*"
+            },
+            {
+                "name": "m_uLayerOrientation",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_pProperties",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_sLayerName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_cOpacity",
+                "type": "unsigned char"
+            },
+            {
+                "name": "m_uMinGID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uMaxGID",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_nVertexZvalue",
+                "type": "int"
+            },
+            {
+                "name": "m_bUseAutomaticVertexZ",
+                "type": "bool"
+            },
+            {
+                "name": "m_pReusedTile",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "m_pAtlasIndexArray",
+                "type": "ccCArray*"
+            },
+            {
+                "name": "m_fContentScaleFactor",
+                "type": "float"
+            }
+        ]
+    },
+    "CCTMXTiledMap": {
+        "name": "CCTMXTiledMap",
+        "subclasses": [
+            "CCNode"
+        ],
+        "members": [
+            {
+                "name": "m_tMapSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_tTileSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_nMapOrientation",
+                "type": "int"
+            },
+            {
+                "name": "m_pObjectGroups",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pProperties",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_pTileProperties",
+                "type": "CCDictionary*"
+            }
+        ]
+    },
+    "CCTileMapAtlas": {
+        "name": "CCTileMapAtlas",
+        "subclasses": [
+            "CCAtlasNode"
+        ],
+        "members": [
+            {
+                "name": "m_pTGAInfo",
+                "type": "struct sImageTGA*"
+            },
+            {
+                "name": "m_pPosToAtlasIndex",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_nItemsToRender",
+                "type": "int"
+            }
+        ]
+    },
+    "ccTouchHandlerHelperData": {
+        "name": "ccTouchHandlerHelperData",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_type",
+                "type": "int"
+            }
+        ]
+    },
+    "EGLTouchDelegate": {
+        "name": "EGLTouchDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "CCTouchDispatcher": {
+        "name": "CCTouchDispatcher",
+        "subclasses": [
+            "CCObject",
+            "EGLTouchDelegate"
+        ],
+        "members": [
+            {
+                "name": "m_pTargetedHandlers",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pStandardHandlers",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_bLocked",
+                "type": "bool"
+            },
+            {
+                "name": "m_bToAdd",
+                "type": "bool"
+            },
+            {
+                "name": "m_bToRemove",
+                "type": "bool"
+            },
+            {
+                "name": "m_pHandlersToAdd",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_pHandlersToRemove",
+                "type": "struct _ccCArray*"
+            },
+            {
+                "name": "m_bToQuit",
+                "type": "bool"
+            },
+            {
+                "name": "m_bDispatchEvents",
+                "type": "bool"
+            },
+            {
+                "name": "m_sHandlerHelperData",
+                "type": "struct ccTouchHandlerHelperData[ccTouchMax]"
+            },
+            {
+                "name": "m_bForcePrio",
+                "type": "bool"
+            },
+            {
+                "name": "m_nTargetPrio",
+                "type": "int"
+            }
+        ]
+    },
+    "CCTouchHandler": {
+        "name": "CCTouchHandler",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegate",
+                "type": "CCTouchDelegate*"
+            },
+            {
+                "name": "m_nPriority",
+                "type": "int"
+            },
+            {
+                "name": "m_nEnabledSelectors",
+                "type": "int"
+            }
+        ]
+    },
+    "CCStandardTouchHandler": {
+        "name": "CCStandardTouchHandler",
+        "subclasses": [
+            "CCTouchHandler"
+        ],
+        "members": []
+    },
+    "CCTargetedTouchHandler": {
+        "name": "CCTargetedTouchHandler",
+        "subclasses": [
+            "CCTouchHandler"
+        ],
+        "members": [
+            {
+                "name": "m_bSwallowsTouches",
+                "type": "bool"
+            },
+            {
+                "name": "m_pClaimedTouches",
+                "type": "CCSet*"
+            }
+        ]
+    },
+    "CCTimer": {
+        "name": "CCTimer",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pTarget",
+                "type": "CCObject*"
+            },
+            {
+                "name": "m_fElapsed",
+                "type": "float"
+            },
+            {
+                "name": "m_bRunForever",
+                "type": "bool"
+            },
+            {
+                "name": "m_bUseDelay",
+                "type": "bool"
+            },
+            {
+                "name": "m_uTimesExecuted",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_uRepeat",
+                "type": "unsigned int"
+            },
+            {
+                "name": "m_fDelay",
+                "type": "float"
+            },
+            {
+                "name": "m_fInterval",
+                "type": "float"
+            },
+            {
+                "name": "m_pfnSelector",
+                "type": "SEL_SCHEDULE"
+            },
+            {
+                "name": "m_nScriptHandler",
+                "type": "int"
+            }
+        ]
+    },
+    "CCScheduler": {
+        "name": "CCScheduler",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_fTimeScale",
+                "type": "float"
+            },
+            {
+                "name": "m_pUpdatesNegList",
+                "type": "struct _listEntry*"
+            },
+            {
+                "name": "m_pUpdates0List",
+                "type": "struct _listEntry*"
+            },
+            {
+                "name": "m_pUpdatesPosList",
+                "type": "struct _listEntry*"
+            },
+            {
+                "name": "m_pHashForUpdates",
+                "type": "struct _hashUpdateEntry*"
+            },
+            {
+                "name": "m_pHashForTimers",
+                "type": "struct _hashSelectorEntry*"
+            },
+            {
+                "name": "m_pCurrentTarget",
+                "type": "struct _hashSelectorEntry*"
+            },
+            {
+                "name": "m_bCurrentTargetSalvaged",
+                "type": "bool"
+            },
+            {
+                "name": "m_bUpdateHashLocked",
+                "type": "bool"
+            },
+            {
+                "name": "m_pScriptHandlerEntries",
+                "type": "CCArray*"
+            }
+        ]
+    },
+    "CCComponent": {
+        "name": "CCComponent",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pOwner",
+                "type": "CCNode*"
+            },
+            {
+                "name": "m_strName",
+                "type": "std::string"
+            },
+            {
+                "name": "m_bEnabled",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCComponentContainer": {
+        "name": "CCComponentContainer",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "m_pComponents",
+                "type": "CCDictionary*"
+            },
+            {
+                "name": "m_pOwner",
+                "type": "CCNode*"
+            }
+        ]
+    },
+    "CCKeyboardDispatcher": {
+        "name": "CCKeyboardDispatcher",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegates",
+                "type": "CCArray*"
+            },
+            {
+                "name": "m_bUnknown24",
+                "type": "bool"
+            },
+            {
+                "name": "m_bUnknown25",
+                "type": "bool"
+            },
+            {
+                "name": "pad7",
+                "type": "char[2]"
+            },
+            {
+                "name": "m_pUnknown28",
+                "type": "ccCArray*"
+            },
+            {
+                "name": "m_pUnknown2c",
+                "type": "ccCArray*"
+            },
+            {
+                "name": "m_bShiftPressed",
+                "type": "bool"
+            },
+            {
+                "name": "m_bControlPressed",
+                "type": "bool"
+            },
+            {
+                "name": "m_bAltPressed",
+                "type": "bool"
+            },
+            {
+                "name": "m_bCommandPressed",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCMouseDispatcher": {
+        "name": "CCMouseDispatcher",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "m_pDelegates",
+                "type": "CCArray*"
+            }
+        ]
+    },
+    "CCSceneTransitionDelegate": {
+        "name": "CCSceneTransitionDelegate",
+        "subclasses": [],
+        "members": []
+    },
+    "DS_Dictionary": {
+        "name": "DS_Dictionary",
+        "subclasses": [],
+        "members": [
+            {
+                "name": "doc",
+                "type": "pugi::xml_document"
+            },
+            {
+                "name": "dictTree",
+                "type": "std::vector<pugi::xml_node>"
+            },
+            {
+                "name": "compatible",
+                "type": "bool"
+            }
+        ]
+    },
+    "CCHttpRequest": {
+        "name": "CCHttpRequest",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "_requestType",
+                "type": "HttpRequestType"
+            },
+            {
+                "name": "_url",
+                "type": "std::string"
+            },
+            {
+                "name": "_requestData",
+                "type": "std::vector<char>"
+            },
+            {
+                "name": "_tag",
+                "type": "std::string"
+            },
+            {
+                "name": "_pTarget",
+                "type": "CCObject*"
+            },
+            {
+                "name": "_pSelector",
+                "type": "SEL_HttpResponse"
+            },
+            {
+                "name": "_pUserData",
+                "type": "void*"
+            },
+            {
+                "name": "_headers",
+                "type": "std::vector<std::string>"
+            },
+            {
+                "name": "_requestTypeGJ",
+                "type": "int"
+            },
+            {
+                "name": "_shouldCancel",
+                "type": "bool"
+            },
+            {
+                "name": "_downloadProgress",
+                "type": "int"
+            },
+            {
+                "name": "_readTimeout",
+                "type": "int"
+            }
+        ]
+    },
+    "CCHttpResponse": {
+        "name": "CCHttpResponse",
+        "subclasses": [
+            "CCObject"
+        ],
+        "members": [
+            {
+                "name": "_pHttpRequest",
+                "type": "CCHttpRequest*"
+            },
+            {
+                "name": "_succeed",
+                "type": "bool"
+            },
+            {
+                "name": "_responseData",
+                "type": "std::vector<char>"
+            },
+            {
+                "name": "_responseHeader",
+                "type": "std::vector<char>"
+            },
+            {
+                "name": "_responseCode",
+                "type": "int"
+            },
+            {
+                "name": "_errorBuffer",
+                "type": "std::string"
+            }
+        ]
+    },
+    "CCScale9Sprite": {
+        "name": "CCScale9Sprite",
+        "subclasses": [
+            "CCNodeRGBA"
+        ],
+        "members": [
+            {
+                "name": "m_originalSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_preferredSize",
+                "type": "CCSize"
+            },
+            {
+                "name": "m_capInsets",
+                "type": "CCRect"
+            },
+            {
+                "name": "_insetLeft",
+                "type": "float"
+            },
+            {
+                "name": "_insetTop",
+                "type": "float"
+            },
+            {
+                "name": "_insetRight",
+                "type": "float"
+            },
+            {
+                "name": "_insetBottom",
+                "type": "float"
+            },
+            {
+                "name": "m_bSpritesGenerated",
+                "type": "bool"
+            },
+            {
+                "name": "m_spriteRect",
+                "type": "CCRect"
+            },
+            {
+                "name": "m_bSpriteFrameRotated",
+                "type": "bool"
+            },
+            {
+                "name": "m_capInsetsInternal",
+                "type": "CCRect"
+            },
+            {
+                "name": "m_positionsAreDirty",
+                "type": "bool"
+            },
+            {
+                "name": "_scale9Image",
+                "type": "CCSpriteBatchNode*"
+            },
+            {
+                "name": "_topLeft",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_top",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_topRight",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_left",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_centre",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_right",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_bottomLeft",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_bottom",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_bottomRight",
+                "type": "CCSprite*"
+            },
+            {
+                "name": "_opacityModifyRGB",
+                "type": "bool"
+            },
+            {
+                "name": "_opacity",
+                "type": "GLubyte"
+            },
+            {
+                "name": "_color",
+                "type": "ccColor3B"
+            }
+        ]
+    }
+}

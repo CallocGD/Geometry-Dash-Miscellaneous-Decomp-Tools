@@ -1,0 +1,4 @@
+# for parsing Libcoscos2dx C++ headers
+cxxheaderparser
+orjson
+sqlmodel

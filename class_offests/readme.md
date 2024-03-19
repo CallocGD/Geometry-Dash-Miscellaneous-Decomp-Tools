@@ -10,4 +10,8 @@ useful secondary resource...
 - Maybe a Ghidra Script written in Java (Since Python version isn't totally working for Python 3 yet) to help auto fill in subclasses members (simillar to IDA-PRO, I think...),
 from completely finished classes objects Inherited from CCObjects and other Class variables From Geometry Dash and more because writing these members by hand is a pain in the ass...
 
+# WARNING
+This is Obsolete and better tools are planned for taking it's place thsi directory will be deleted soon.
+
+
 
